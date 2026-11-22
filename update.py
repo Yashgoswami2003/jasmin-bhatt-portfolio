@@ -33,33 +33,77 @@ img, picture, svg, video, iframe {{
   max-width: 100%;
 }}
 
-/* Smart Image Framing: No stretching, no cut faces/titles */
+/* Portrait: clean top-focused framing across mobile & desktop */
 img[src*="assets/media/portrait/"] {{
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 460px;
   object-fit: cover !important;
   object-position: center top !important;
+  border-radius: 0.75rem;
 }}
 
-img[src*="assets/media/books/"],
-img[src*="assets/media/cinema-theatre/"],
-img[src*="assets/media/gallery/"] {{
-  width: 100%;
-  height: 100%;
+/* Book covers: full cover visible with zero extra vertical gap */
+img[src*="assets/media/books/"] {{
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 380px;
+  margin-left: auto !important;
+  margin-right: auto !important;
   object-fit: contain !important;
-  object-position: center center !important;
-  background-color: #F1ECE2;
+  object-position: center !important;
+  border-radius: 0.65rem;
+}}
+
+/* Cinema / theatre posters & stills: full poster visible without extra empty box gap */
+img[src*="assets/media/cinema-theatre/"] {{
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 300px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 0.65rem;
+}}
+
+/* Gallery slots: clean fit without excessive empty space */
+img[src*="assets/media/gallery/"] {{
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 280px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 0.65rem;
+}}
+
+/* Collapse oversized aspect-ratio wrappers when holding full-fit media */
+div:has(> img[src*="assets/media/books/"]),
+div:has(> img[src*="assets/media/cinema-theatre/"]),
+div:has(> img[src*="assets/media/gallery/"]) {{
+  aspect-ratio: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }}
 
 @media (max-width: 767px) {{
   h1 {{
-    font-size: clamp(1.95rem, 8.2vw, 2.65rem) !important;
+    font-size: clamp(1.9rem, 8vw, 2.55rem) !important;
     line-height: 1.12 !important;
     word-break: break-word;
   }}
 
   h2 {{
-    font-size: clamp(1.6rem, 6.6vw, 2.2rem) !important;
+    font-size: clamp(1.55rem, 6.4vw, 2.1rem) !important;
     line-height: 1.16 !important;
     word-break: break-word;
   }}
@@ -72,17 +116,16 @@ img[src*="assets/media/gallery/"] {{
     min-height: 40px;
   }}
 
-  /* Give book & film cards natural mobile height so full poster/cover shows cleanly */
   img[src*="assets/media/books/"] {{
-    max-height: 360px;
-    margin-left: auto;
-    margin-right: auto;
+    max-height: 340px;
   }}
 
   img[src*="assets/media/cinema-theatre/"] {{
-    max-height: 260px;
-    margin-left: auto;
-    margin-right: auto;
+    max-height: 250px;
+  }}
+
+  img[src*="assets/media/portrait/"] {{
+    max-height: 360px;
   }}
 }}
 {MARKER_END}
@@ -100,7 +143,6 @@ def backup_files():
 
 
 def patch_html(content: str) -> str:
-    # 1. Ensure viewport-fit=cover on mobile
     content = re.sub(
         r'<meta\s+name="viewport"\s+content="width=device-width,\s*initial-scale=1\.0"\s*/?>',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />',
@@ -108,7 +150,6 @@ def patch_html(content: str) -> str:
         flags=re.IGNORECASE,
     )
 
-    # 2. Remove previous auto-fix block if re-running update.py
     pattern_existing = re.compile(
         re.escape(MARKER_START) + r".*?" + re.escape(MARKER_END),
         flags=re.DOTALL,
