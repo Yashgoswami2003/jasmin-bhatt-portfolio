@@ -2,16 +2,23 @@
 <html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Awards, Media &amp; Gallery | Jasmin Bhatt</title>
   <meta name="description" content="Literary, theatre, and web series recognition, media &amp; press coverage, and curated visual gallery slots for Jasmin Bhatt from Bhavnagar, Gujarat." />
   <meta name="keywords" content="Jasmin Bhatt awards, Library Ek Anokhi Varta National Awards, Ek Sambandh Aavo Pan bestseller, Jyot YES Foundation, Saaransh Saptarshi, Jasmin Bhatt media gallery" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#FAF7F2" />
+  <link rel="canonical" href="https://www.imdb.com/name/nm15420877/" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jasmin Bhatt Official Portfolio" />
   <meta property="og:title" content="Awards, Media &amp; Gallery | Jasmin Bhatt" />
   <meta property="og:description" content="Recognition across literature, theatre, and web series, alongside press coverage and gallery showcase slots for Jasmin Bhatt." />
   <meta property="og:url" content="https://www.imdb.com/name/nm15420877/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Awards, Media &amp; Gallery | Jasmin Bhatt" />
+  <meta name="twitter:description" content="Recognition across literature, theatre, and web series, alongside press coverage and gallery showcase slots for Jasmin Bhatt." />
 
   <script type="application/ld+json">
   {
@@ -54,13 +61,13 @@
       theme: {
         extend: {
           colors: {
-            obsidian: '#0F1115',
-            charcoal: '#171B22',
-            charcoalLight: '#1E242E',
-            ivory: '#F6F2EA',
+            obsidian: '#FAF7F2',
+            charcoal: '#F1ECE2',
+            charcoalLight: '#E6DFD1',
+            ivory: '#FFFFFF',
             ivoryCard: '#FFFDF9',
-            gold: '#D4AF37',
-            goldLight: '#E8CC73',
+            gold: '#B47B1E',
+            goldLight: '#D49A34',
             crimsonAccent: '#8C3B2B'
           },
           fontFamily: {
@@ -73,56 +80,165 @@
   </script>
 
   <style>
+    html,
     body {
       overflow-x: hidden;
+      background-color: #FAF7F2;
+      color: #1E293B;
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-tap-highlight-color: rgba(180, 123, 30, 0.16);
     }
+    a,
+    button {
+      touch-action: manipulation;
+    }
+
+    /* Slow-Network / Tailwind CDN Fallback Layer (Light Theme) */
+    .max-w-7xl {
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    @media (min-width: 640px) {
+      .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (min-width: 768px) {
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+    .font-serif {
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    }
+    .text-gold {
+      color: #B47B1E;
+    }
+    .text-crimsonAccent {
+      color: #8C3B2B;
+    }
+    .bg-gold {
+      background-color: #B47B1E;
+      color: #FFFFFF;
+    }
+    .bg-charcoal {
+      background-color: #F1ECE2;
+    }
+    .bg-ivoryCard {
+      background-color: #FFFDF9;
+    }
+    .rounded-2xl {
+      border-radius: 1rem;
+    }
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+    .shadow-xs {
+      box-shadow: 0 1px 3px rgba(24, 24, 27, 0.06);
+    }
+
     .gold-hairline {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.65), transparent);
+      background: linear-gradient(90deg, transparent, rgba(180, 123, 30, 0.55), transparent);
     }
-    .luxury-card {
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    .luxury-card,
+    .award-card,
+    .gallery-item {
+      position: relative;
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.32s ease, box-shadow 0.32s ease, background-color 0.32s ease;
     }
-    .luxury-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(212, 175, 55, 0.55);
-      box-shadow: 0 18px 40px -15px rgba(0, 0, 0, 0.65);
+    .luxury-card:active,
+    .award-card:active,
+    .gallery-item:active {
+      transform: scale(0.99);
+      border-color: #B47B1E;
+    }
+    .filter-btn {
+      min-height: 40px;
+      transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     }
     .filter-btn.active {
-      background-color: #D4AF37;
-      color: #0F1115;
-      border-color: #D4AF37;
+      background-color: #B47B1E;
+      color: #FFFFFF;
+      border-color: #B47B1E;
       font-weight: 600;
+      box-shadow: 0 6px 16px -6px rgba(180, 123, 30, 0.45);
+    }
+    .nav-link-hover {
+      position: relative;
+      transition: color 0.25s ease;
+    }
+    .nav-link-hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: #B47B1E;
+      transition: width 0.25s ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .luxury-card:hover,
+      .award-card:hover,
+      .gallery-item:hover {
+        transform: translateY(-6px);
+        border-color: #B47B1E;
+        box-shadow: 0 22px 42px -14px rgba(180, 123, 30, 0.22), 0 8px 18px -10px rgba(24, 24, 27, 0.12);
+      }
+      .filter-btn:not(.active):hover {
+        border-color: #B47B1E;
+        background-color: #FFFFFF;
+      }
+      .nav-link-hover:hover::after {
+        width: 100%;
+      }
     }
   </style>
 </head>
-<body class="bg-obsidian text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-obsidian">
+<body class="bg-obsidian text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-white">
 
   <!-- Top Scroll Progress Bar -->
   <div id="scroll-progress" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-goldLight via-gold to-crimsonAccent z-[60] transition-[width] duration-150"></div>
 
   <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 w-full bg-obsidian/95 backdrop-blur-md border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3.5 flex items-center justify-between gap-3 min-w-0">
-      <a href="index.html" class="flex flex-col min-w-0 shrink-0">
-        <span class="font-serif text-xl sm:text-2xl md:text-[26px] font-semibold tracking-wide text-ivory leading-none">
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3.5 flex items-center justify-between gap-2.5 sm:gap-3 min-w-0">
+      <a href="index.html" class="flex flex-col min-w-0 shrink group">
+        <span class="font-serif text-lg sm:text-2xl md:text-[26px] font-semibold tracking-wide text-slate-900 group-hover:text-gold transition leading-none truncate">
           Jasmin Bhatt
         </span>
-        <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-gold mt-1">
+        <span class="text-[9px] sm:text-[11px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold mt-1 font-semibold truncate">
           Bhavnagar • Gujarat
         </span>
       </a>
 
-      <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm text-slate-300">
-        <a href="index.html" class="hover:text-gold transition whitespace-nowrap">Home</a>
-        <a href="about.html" class="hover:text-gold transition whitespace-nowrap">About &amp; Practice</a>
-        <a href="works.html" class="hover:text-gold transition whitespace-nowrap">Cinema &amp; Stage</a>
-        <a href="literature-stories.html" class="hover:text-gold transition whitespace-nowrap">Books &amp; Poetry</a>
-        <a href="media-gallery.html" class="text-gold font-semibold border-b border-gold pb-0.5 whitespace-nowrap">Media &amp; Gallery</a>
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm text-slate-600">
+        <a href="index.html" class="nav-link-hover hover:text-slate-950 whitespace-nowrap">Home</a>
+        <a href="about.html" class="nav-link-hover hover:text-slate-950 whitespace-nowrap">About &amp; Practice</a>
+        <a href="works.html" class="nav-link-hover hover:text-slate-950 whitespace-nowrap">Cinema &amp; Stage</a>
+        <a href="literature-stories.html" class="nav-link-hover hover:text-slate-950 whitespace-nowrap">Books &amp; Poetry</a>
+        <a href="media-gallery.html" class="text-slate-950 font-semibold border-b-2 border-gold pb-0.5 whitespace-nowrap">Media &amp; Gallery</a>
       </nav>
 
       <div class="flex items-center gap-2 shrink-0">
-        <a href="contact.html" class="px-3.5 py-2 md:px-4 md:py-2 rounded-full bg-gold text-obsidian text-xs font-semibold hover:bg-goldLight transition whitespace-nowrap">
+        <a href="contact.html" class="px-3.5 py-2.5 md:px-4 md:py-2 rounded-full bg-gold text-white text-xs font-semibold hover:bg-crimsonAccent active:scale-[0.98] md:hover:-translate-y-0.5 transition duration-200 whitespace-nowrap shadow-xs">
           Collaborate
         </a>
         <button
@@ -130,62 +246,62 @@
           type="button"
           aria-label="Open Navigation Menu"
           aria-expanded="false"
-          class="md:hidden w-9 h-9 rounded-lg border border-white/15 bg-charcoal text-ivory flex items-center justify-center text-base hover:border-gold/60 transition"
+          class="md:hidden w-10 h-10 rounded-lg border border-stone-300 bg-ivoryCard text-slate-900 flex items-center justify-center text-base hover:border-gold hover:bg-charcoal active:scale-95 transition"
         >
           ☰
         </button>
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-t border-white/10 px-4 py-4 space-y-2 text-sm">
-      <a href="index.html" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-gold transition">Home</a>
-      <a href="about.html" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-gold transition">About, Education &amp; Tax/Law</a>
-      <a href="works.html" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-gold transition">Cinema, OTT, Theatre &amp; Audio</a>
-      <a href="literature-stories.html" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-gold transition">Books, Poetry &amp; Stories</a>
-      <a href="media-gallery.html" class="block py-2 px-3 rounded-lg bg-white/5 text-gold font-medium">Awards, Press &amp; Gallery</a>
-      <a href="contact.html" class="block py-2 px-3 rounded-lg text-gold hover:bg-white/5 transition">Contact &amp; Security</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-ivoryCard border-t border-stone-200 px-4 py-4 space-y-1.5 text-sm shadow-md">
+      <a href="index.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Home</a>
+      <a href="about.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">About, Education &amp; Tax/Law</a>
+      <a href="works.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Cinema, OTT, Theatre &amp; Audio</a>
+      <a href="literature-stories.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Books, Poetry &amp; Stories</a>
+      <a href="media-gallery.html" class="block py-2.5 px-3.5 rounded-lg bg-charcoal text-slate-950 font-semibold">Awards, Press &amp; Gallery</a>
+      <a href="contact.html" class="block py-2.5 px-3.5 rounded-lg text-gold font-medium hover:bg-charcoal transition">Contact &amp; Security</a>
     </div>
   </header>
 
   <!-- Page Hero -->
-  <section class="w-full py-12 sm:py-16 md:py-20 border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-5 max-w-4xl">
-      <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-charcoal border border-gold/30 text-gold text-[11px] sm:text-xs">
+  <section class="w-full py-10 sm:py-16 md:py-20 border-b border-stone-200/90 bg-gradient-to-b from-white via-obsidian to-charcoal/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-4 sm:space-y-5 max-w-4xl">
+      <div class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white border border-gold/40 text-gold text-[10px] sm:text-xs font-semibold shadow-2xs">
         <span>Awards &amp; Achievements</span>
-        <span class="text-white/30">•</span>
+        <span class="text-stone-300">•</span>
         <span>Media &amp; Press</span>
-        <span class="text-white/30">•</span>
+        <span class="text-stone-300">•</span>
         <span>Gallery</span>
       </div>
 
-      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold text-ivory leading-[1.08] break-words">
+      <h1 class="font-serif text-[34px] sm:text-5xl md:text-6xl font-semibold text-slate-950 leading-[1.08] sm:leading-[1.06] tracking-tight break-words">
         Recognition, <span class="text-gold italic">Press &amp; Visual Archive.</span>
       </h1>
 
-      <p class="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
+      <p class="text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
         Highlighting literary, theatre, and web series milestones alongside structured slots ready for official photographs, book covers, posters, awards/certificates, press articles, interviews, and poetry/event moments.
       </p>
 
-      <div class="flex flex-wrap gap-2.5 pt-1 text-xs">
-        <a href="#awards-recognition" class="px-4 py-2 rounded-xl bg-gold text-obsidian font-semibold hover:bg-goldLight transition">
+      <div class="flex flex-col sm:flex-row flex-wrap gap-2.5 pt-1 text-xs">
+        <a href="#awards-recognition" class="text-center px-4 py-2.5 rounded-xl bg-gold text-white font-semibold hover:bg-crimsonAccent active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-xs">
           Awards &amp; Recognition
         </a>
-        <a href="#media-press" class="px-4 py-2 rounded-xl bg-charcoal border border-white/15 text-ivory hover:border-gold/60 transition">
+        <a href="#media-press" class="text-center px-4 py-2.5 rounded-xl bg-white border border-stone-300 text-slate-900 font-semibold hover:border-gold hover:text-gold active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
           Media &amp; Press
         </a>
-        <a href="#gallery-archive" class="px-4 py-2 rounded-xl bg-charcoal border border-white/15 text-ivory hover:border-gold/60 transition">
+        <a href="#gallery-archive" class="text-center px-4 py-2.5 rounded-xl bg-white border border-stone-300 text-slate-900 font-semibold hover:border-gold hover:text-gold active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
           Gallery Slots
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Awards & Achievements (Ivory Editorial Band) -->
-  <section id="awards-recognition" class="w-full bg-ivory text-slate-900 py-14 sm:py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-10">
+  <!-- Awards & Achievements (Light Contrast Band) -->
+  <section id="awards-recognition" class="w-full bg-ivory text-slate-900 py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
       <div class="max-w-3xl">
-        <span class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-semibold">Awards &amp; Achievements</span>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1">
+        <span class="text-xs uppercase tracking-[0.22em] text-crimsonAccent font-bold">Awards &amp; Achievements</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1 leading-tight">
           Literary, Theatre &amp; Web Series Recognition
         </h2>
         <p class="text-sm sm:text-base text-slate-700 mt-2">
@@ -193,68 +309,68 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <article class="bg-ivoryCard rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between min-w-0">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <article class="award-card bg-ivoryCard rounded-2xl p-5 sm:p-6 border border-stone-200 border-t-4 border-t-crimsonAccent shadow-xs flex flex-col justify-between min-w-0">
           <div class="space-y-2.5">
-            <span class="inline-block px-2.5 py-1 rounded-full bg-crimsonAccent/10 text-crimsonAccent text-[11px] font-semibold">
+            <span class="inline-block px-2.5 py-1 rounded-full bg-crimsonAccent/10 text-crimsonAccent text-[11px] font-bold">
               Web Series
             </span>
             <h3 class="font-serif text-2xl font-semibold text-slate-950">Four National Awards</h3>
-            <p class="text-xs font-semibold text-slate-800">Library – Ek Anokhi Varta</p>
+            <p class="text-xs font-semibold text-slate-800 break-words">Library – Ek Anokhi Varta</p>
             <p class="text-sm text-slate-700 leading-relaxed">
               Written and directed web series recognized with four National Awards across digital platforms.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-stone-200 text-xs font-semibold text-crimsonAccent">
-            <a href="works.html" class="hover:underline">View Series Details →</a>
+            <a href="works.html" class="inline-block py-1 hover:text-gold transition">View Series Details →</a>
           </div>
         </article>
 
-        <article class="bg-ivoryCard rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between min-w-0">
+        <article class="award-card bg-ivoryCard rounded-2xl p-5 sm:p-6 border border-stone-200 border-t-4 border-t-gold shadow-xs flex flex-col justify-between min-w-0">
           <div class="space-y-2.5">
-            <span class="inline-block px-2.5 py-1 rounded-full bg-crimsonAccent/10 text-crimsonAccent text-[11px] font-semibold">
+            <span class="inline-block px-2.5 py-1 rounded-full bg-gold/15 text-gold text-[11px] font-bold">
               Literature • 2020–2021
             </span>
             <h3 class="font-serif text-2xl font-semibold text-slate-950">Bestseller Recognition</h3>
-            <p class="text-xs font-semibold text-slate-800">Ek Sambandh… Aavo Pan…</p>
+            <p class="text-xs font-semibold text-slate-800 break-words">Ek Sambandh… Aavo Pan…</p>
             <p class="text-sm text-slate-700 leading-relaxed">
               Gujarati relationship fiction published by Navbharat Sahitya Prakashan, Ahmedabad, recognized as a bestseller during 2020–2021.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-stone-200 text-xs font-semibold text-crimsonAccent">
-            <a href="literature-stories.html" class="hover:underline">View Book Details →</a>
+            <a href="literature-stories.html" class="inline-block py-1 hover:text-gold transition">View Book Details →</a>
           </div>
         </article>
 
-        <article class="bg-ivoryCard rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between min-w-0">
+        <article class="award-card bg-ivoryCard rounded-2xl p-5 sm:p-6 border border-stone-200 border-t-4 border-t-crimsonAccent shadow-xs flex flex-col justify-between min-w-0">
           <div class="space-y-2.5">
-            <span class="inline-block px-2.5 py-1 rounded-full bg-crimsonAccent/10 text-crimsonAccent text-[11px] font-semibold">
+            <span class="inline-block px-2.5 py-1 rounded-full bg-crimsonAccent/10 text-crimsonAccent text-[11px] font-bold">
               Theatre Selection
             </span>
             <h3 class="font-serif text-2xl font-semibold text-slate-950">Selected by YES Foundation</h3>
-            <p class="text-xs font-semibold text-slate-800">Jyot (Hindi Theatrical Production)</p>
+            <p class="text-xs font-semibold text-slate-800 break-words">Jyot (Hindi Theatrical Production)</p>
             <p class="text-sm text-slate-700 leading-relaxed">
               Hindi theatrical writing and direction selected by YES Foundation.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-stone-200 text-xs font-semibold text-crimsonAccent">
-            <a href="works.html#theatre-section" class="hover:underline">View Theatre Credits →</a>
+            <a href="works.html#theatre-section" class="inline-block py-1 hover:text-gold transition">View Theatre Credits →</a>
           </div>
         </article>
 
-        <article class="bg-ivoryCard rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between min-w-0">
+        <article class="award-card bg-ivoryCard rounded-2xl p-5 sm:p-6 border border-stone-200 border-t-4 border-t-gold shadow-xs flex flex-col justify-between min-w-0">
           <div class="space-y-2.5">
-            <span class="inline-block px-2.5 py-1 rounded-full bg-crimsonAccent/10 text-crimsonAccent text-[11px] font-semibold">
+            <span class="inline-block px-2.5 py-1 rounded-full bg-gold/15 text-gold text-[11px] font-bold">
               Theatre • Saptarshi
             </span>
             <h3 class="font-serif text-2xl font-semibold text-slate-950">Second Rank at Saptarshi</h3>
-            <p class="text-xs font-semibold text-slate-800">Saaransh (Writing / Theatre Project)</p>
+            <p class="text-xs font-semibold text-slate-800 break-words">Saaransh (Writing / Theatre Project)</p>
             <p class="text-sm text-slate-700 leading-relaxed">
               Secured Second Rank at Saptarshi for writing and theatrical storytelling.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-stone-200 text-xs font-semibold text-crimsonAccent">
-            <a href="works.html#theatre-section" class="hover:underline">View Theatre Credits →</a>
+            <a href="works.html#theatre-section" class="inline-block py-1 hover:text-gold transition">View Theatre Credits →</a>
           </div>
         </article>
       </div>
@@ -262,44 +378,44 @@
   </section>
 
   <!-- Media & Press Section -->
-  <section id="media-press" class="w-full py-14 sm:py-16 md:py-20 border-b border-white/10">
+  <section id="media-press" class="w-full bg-obsidian py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div class="max-w-3xl">
-          <span class="text-xs uppercase tracking-[0.2em] text-gold font-semibold">Media &amp; Press</span>
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-ivory mt-1">
+          <span class="text-xs uppercase tracking-[0.22em] text-gold font-bold">Media &amp; Press</span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1 leading-tight">
             Interviews, Newspaper Articles &amp; Book Reviews
           </h2>
-          <p class="text-sm sm:text-base text-slate-300 mt-2 leading-relaxed">
+          <p class="text-sm sm:text-base text-slate-700 mt-2 leading-relaxed">
             Dedicated showcase structure ready for newspaper articles, interviews, media coverage, book reviews, and recognition certificates once shared.
           </p>
         </div>
-        <a href="contact.html" class="px-5 py-3 rounded-xl bg-gold text-obsidian text-xs sm:text-sm font-semibold hover:bg-goldLight transition self-start md:self-auto shrink-0">
+        <a href="contact.html" class="text-center px-5 py-3 rounded-xl bg-gold text-white text-xs sm:text-sm font-semibold hover:bg-crimsonAccent active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 self-start md:self-auto shrink-0 shadow-xs">
           Press &amp; Interview Enquiry →
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <article class="luxury-card rounded-2xl bg-charcoal border border-white/10 p-6 space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-wider text-gold font-semibold">Press &amp; Print</div>
-          <h3 class="font-serif text-2xl text-ivory">Newspaper Articles &amp; Features</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Slot prepared for print clippings, regional &amp; national features, and editorial highlights in <span class="text-ivory font-medium">assets/media/gallery/</span>.
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+        <article class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-6 space-y-3 min-w-0 shadow-xs">
+          <div class="text-xs uppercase tracking-wider text-crimsonAccent font-bold">Press &amp; Print</div>
+          <h3 class="font-serif text-2xl font-semibold text-slate-950">Newspaper Articles &amp; Features</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Slot prepared for print clippings, regional &amp; national features, and editorial highlights in <span class="text-slate-950 font-semibold">assets/media/gallery/</span>.
           </p>
         </article>
 
-        <article class="luxury-card rounded-2xl bg-charcoal border border-white/10 p-6 space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-wider text-gold font-semibold">Conversations</div>
-          <h3 class="font-serif text-2xl text-ivory">Interviews &amp; Live Appearances</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
+        <article class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-6 space-y-3 min-w-0 shadow-xs">
+          <div class="text-xs uppercase tracking-wider text-crimsonAccent font-bold">Conversations</div>
+          <h3 class="font-serif text-2xl font-semibold text-slate-950">Interviews &amp; Live Appearances</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
             Slot prepared for video/audio interviews, live literary sessions, and public appearances alongside featured YouTube highlights.
           </p>
         </article>
 
-        <article class="luxury-card rounded-2xl bg-charcoal border border-white/10 p-6 space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-wider text-gold font-semibold">Critical Reception</div>
-          <h3 class="font-serif text-2xl text-ivory">Media Coverage &amp; Book Reviews</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
+        <article class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-6 space-y-3 min-w-0 shadow-xs">
+          <div class="text-xs uppercase tracking-wider text-crimsonAccent font-bold">Critical Reception</div>
+          <h3 class="font-serif text-2xl font-semibold text-slate-950">Media Coverage &amp; Book Reviews</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
             Slot prepared for reviews and media mentions covering <em>Ek Sambandh… Aavo Pan…</em>, <em>Love Vs We…</em>, cinema, theatre, and audio works.
           </p>
         </article>
@@ -308,166 +424,173 @@
   </section>
 
   <!-- Interactive Filterable Gallery Archive -->
-  <section id="gallery-archive" class="w-full py-14 sm:py-16 md:py-20 border-b border-white/10">
+  <section id="gallery-archive" class="w-full bg-white py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div class="max-w-2xl">
-          <span class="text-xs uppercase tracking-[0.2em] text-gold font-semibold">Gallery</span>
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-ivory mt-1">
+          <span class="text-xs uppercase tracking-[0.22em] text-gold font-bold">Gallery</span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1 leading-tight">
             Curated Visual Archive Slots
           </h2>
-          <p class="text-sm text-slate-300 mt-1.5">
+          <p class="text-sm text-slate-700 mt-1.5">
             Clean frames arranged by category so every provided photograph, cover, poster, and certificate drops in without layout shift.
           </p>
         </div>
 
         <!-- Category Filter Buttons -->
         <div class="flex flex-wrap gap-2 text-xs">
-          <button type="button" data-filter="all" class="filter-btn active px-3.5 py-2 rounded-full border border-white/15 bg-charcoal text-slate-200 transition">
+          <button type="button" data-filter="all" class="filter-btn active px-3.5 py-2 rounded-full border border-stone-300 bg-ivoryCard text-slate-800">
             All Slots
           </button>
-          <button type="button" data-filter="portraits-books" class="filter-btn px-3.5 py-2 rounded-full border border-white/15 bg-charcoal text-slate-200 hover:border-gold/60 transition">
+          <button type="button" data-filter="portraits-books" class="filter-btn px-3.5 py-2 rounded-full border border-stone-300 bg-ivoryCard text-slate-800">
             Portraits &amp; Books
           </button>
-          <button type="button" data-filter="cinema-stage" class="filter-btn px-3.5 py-2 rounded-full border border-white/15 bg-charcoal text-slate-200 hover:border-gold/60 transition">
+          <button type="button" data-filter="cinema-stage" class="filter-btn px-3.5 py-2 rounded-full border border-stone-300 bg-ivoryCard text-slate-800">
             Cinema &amp; Stage
           </button>
-          <button type="button" data-filter="poetry-awards" class="filter-btn px-3.5 py-2 rounded-full border border-white/15 bg-charcoal text-slate-200 hover:border-gold/60 transition">
+          <button type="button" data-filter="poetry-awards" class="filter-btn px-3.5 py-2 rounded-full border border-stone-300 bg-ivoryCard text-slate-800">
             Poetry, Awards &amp; Press
           </button>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
         <!-- Slot 1 -->
-        <figure data-category="portraits-books" class="gallery-item rounded-2xl bg-charcoal border border-white/10 p-3 space-y-3 min-w-0">
-          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoalLight to-obsidian border border-dashed border-gold/40 flex flex-col items-center justify-center text-center p-4">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-gold">Portrait Slot</span>
-            <p class="font-serif text-xl text-ivory mt-1">Professional Photographs</p>
-            <span class="text-[11px] text-slate-400 mt-1">assets/media/portrait/</span>
+        <figure data-category="portraits-books" class="gallery-item rounded-2xl bg-ivoryCard border border-stone-200 p-3 space-y-3 min-w-0 shadow-2xs">
+          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoal to-obsidian border border-dashed border-gold/50 flex flex-col items-center justify-center text-center p-4">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Portrait Slot</span>
+            <p class="font-serif text-xl text-slate-950 mt-1">Professional Photographs</p>
+            <span class="text-[11px] text-slate-600 mt-1 break-all">assets/media/portrait/</span>
           </div>
           <figcaption class="px-1 pb-1">
-            <div class="text-xs font-semibold text-ivory">Official Portraits</div>
-            <div class="text-[11px] text-slate-400">Editorial, author, and filmmaker portraits.</div>
+            <div class="text-xs font-semibold text-slate-950">Official Portraits</div>
+            <div class="text-[11px] text-slate-600">Editorial, author, and filmmaker portraits.</div>
           </figcaption>
         </figure>
 
         <!-- Slot 2 -->
-        <figure data-category="portraits-books" class="gallery-item rounded-2xl bg-charcoal border border-white/10 p-3 space-y-3 min-w-0">
-          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoalLight to-obsidian border border-dashed border-gold/40 flex flex-col items-center justify-center text-center p-4">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-gold">Books Slot</span>
-            <p class="font-serif text-xl text-ivory mt-1">Book Covers &amp; Launches</p>
-            <span class="text-[11px] text-slate-400 mt-1">assets/media/books/</span>
+        <figure data-category="portraits-books" class="gallery-item rounded-2xl bg-ivoryCard border border-stone-200 p-3 space-y-3 min-w-0 shadow-2xs">
+          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoal to-obsidian border border-dashed border-gold/50 flex flex-col items-center justify-center text-center p-4">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Books Slot</span>
+            <p class="font-serif text-xl text-slate-950 mt-1">Book Covers &amp; Launches</p>
+            <span class="text-[11px] text-slate-600 mt-1 break-all">assets/media/books/</span>
           </div>
           <figcaption class="px-1 pb-1">
-            <div class="text-xs font-semibold text-ivory">Published Books &amp; Launches</div>
-            <div class="text-[11px] text-slate-400">Ek Sambandh… Aavo Pan… &amp; Love Vs We… covers and launch moments.</div>
+            <div class="text-xs font-semibold text-slate-950">Published Books &amp; Launches</div>
+            <div class="text-[11px] text-slate-600">Ek Sambandh… Aavo Pan… &amp; Love Vs We… covers and launch moments.</div>
           </figcaption>
         </figure>
 
         <!-- Slot 3 -->
-        <figure data-category="cinema-stage" class="gallery-item rounded-2xl bg-charcoal border border-white/10 p-3 space-y-3 min-w-0">
-          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoalLight to-obsidian border border-dashed border-gold/40 flex flex-col items-center justify-center text-center p-4">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-gold">Cinema &amp; OTT Slot</span>
-            <p class="font-serif text-xl text-ivory mt-1">Film Posters &amp; Stills</p>
-            <span class="text-[11px] text-slate-400 mt-1">assets/media/cinema-theatre/</span>
+        <figure data-category="cinema-stage" class="gallery-item rounded-2xl bg-ivoryCard border border-stone-200 p-3 space-y-3 min-w-0 shadow-2xs">
+          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoal to-obsidian border border-dashed border-gold/50 flex flex-col items-center justify-center text-center p-4">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Cinema &amp; OTT Slot</span>
+            <p class="font-serif text-xl text-slate-950 mt-1">Film Posters &amp; Stills</p>
+            <span class="text-[11px] text-slate-600 mt-1 break-all">assets/media/cinema-theatre/</span>
           </div>
           <figcaption class="px-1 pb-1">
-            <div class="text-xs font-semibold text-ivory">Films, OTT &amp; Filmmaking Moments</div>
-            <div class="text-[11px] text-slate-400">Super Maanav, Man Melo, Library &amp; behind-the-scenes stills.</div>
+            <div class="text-xs font-semibold text-slate-950">Films, OTT &amp; Filmmaking Moments</div>
+            <div class="text-[11px] text-slate-600">Super Maanav, Man Melo, Library &amp; behind-the-scenes stills.</div>
           </figcaption>
         </figure>
 
         <!-- Slot 4 -->
-        <figure data-category="cinema-stage" class="gallery-item rounded-2xl bg-charcoal border border-white/10 p-3 space-y-3 min-w-0">
-          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoalLight to-obsidian border border-dashed border-gold/40 flex flex-col items-center justify-center text-center p-4">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-gold">Theatre Slot</span>
-            <p class="font-serif text-xl text-ivory mt-1">Stage &amp; Rehearsal Photos</p>
-            <span class="text-[11px] text-slate-400 mt-1">assets/media/cinema-theatre/</span>
+        <figure data-category="cinema-stage" class="gallery-item rounded-2xl bg-ivoryCard border border-stone-200 p-3 space-y-3 min-w-0 shadow-2xs">
+          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoal to-obsidian border border-dashed border-gold/50 flex flex-col items-center justify-center text-center p-4">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Theatre Slot</span>
+            <p class="font-serif text-xl text-slate-950 mt-1">Stage &amp; Rehearsal Photos</p>
+            <span class="text-[11px] text-slate-600 mt-1 break-all">assets/media/cinema-theatre/</span>
           </div>
           <figcaption class="px-1 pb-1">
-            <div class="text-xs font-semibold text-ivory">Theatre Productions (Since 2012)</div>
-            <div class="text-[11px] text-slate-400">Aavu Kem?, Jyot, Overtime &amp; Saaransh stage moments.</div>
+            <div class="text-xs font-semibold text-slate-950">Theatre Productions (Since 2012)</div>
+            <div class="text-[11px] text-slate-600">Aavu Kem?, Jyot, Overtime &amp; Saaransh stage moments.</div>
           </figcaption>
         </figure>
 
         <!-- Slot 5 -->
-        <figure data-category="poetry-awards" class="gallery-item rounded-2xl bg-charcoal border border-white/10 p-3 space-y-3 min-w-0">
-          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoalLight to-obsidian border border-dashed border-gold/40 flex flex-col items-center justify-center text-center p-4">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-gold">Poetry &amp; Events Slot</span>
-            <p class="font-serif text-xl text-ivory mt-1">Poetry Shows &amp; Recitals</p>
-            <span class="text-[11px] text-slate-400 mt-1">assets/media/gallery/</span>
+        <figure data-category="poetry-awards" class="gallery-item rounded-2xl bg-ivoryCard border border-stone-200 p-3 space-y-3 min-w-0 shadow-2xs">
+          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoal to-obsidian border border-dashed border-gold/50 flex flex-col items-center justify-center text-center p-4">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Poetry &amp; Events Slot</span>
+            <p class="font-serif text-xl text-slate-950 mt-1">Poetry Shows &amp; Recitals</p>
+            <span class="text-[11px] text-slate-600 mt-1 break-all">assets/media/gallery/</span>
           </div>
           <figcaption class="px-1 pb-1">
-            <div class="text-xs font-semibold text-ivory">Live Literary &amp; Poetry Shows</div>
-            <div class="text-[11px] text-slate-400">Stage recitals, narration events &amp; Kahaniyaan moments.</div>
+            <div class="text-xs font-semibold text-slate-950">Live Literary &amp; Poetry Shows</div>
+            <div class="text-[11px] text-slate-600">Stage recitals, narration events &amp; Kahaniyaan moments.</div>
           </figcaption>
         </figure>
 
         <!-- Slot 6 -->
-        <figure data-category="poetry-awards" class="gallery-item rounded-2xl bg-charcoal border border-white/10 p-3 space-y-3 min-w-0">
-          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoalLight to-obsidian border border-dashed border-gold/40 flex flex-col items-center justify-center text-center p-4">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-gold">Credentials &amp; Awards Slot</span>
-            <p class="font-serif text-xl text-ivory mt-1">Certificates &amp; Press Clippings</p>
-            <span class="text-[11px] text-slate-400 mt-1">assets/media/gallery/</span>
+        <figure data-category="poetry-awards" class="gallery-item rounded-2xl bg-ivoryCard border border-stone-200 p-3 space-y-3 min-w-0 shadow-2xs">
+          <div class="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-charcoal to-obsidian border border-dashed border-gold/50 flex flex-col items-center justify-center text-center p-4">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Credentials &amp; Awards Slot</span>
+            <p class="font-serif text-xl text-slate-950 mt-1">Certificates &amp; Press Clippings</p>
+            <span class="text-[11px] text-slate-600 mt-1 break-all">assets/media/gallery/</span>
           </div>
           <figcaption class="px-1 pb-1">
-            <div class="text-xs font-semibold text-ivory">Awards, Credentials &amp; Press</div>
-            <div class="text-[11px] text-slate-400">Recognition certificates, newspaper features &amp; academic credentials.</div>
+            <div class="text-xs font-semibold text-slate-950">Awards, Credentials &amp; Press</div>
+            <div class="text-[11px] text-slate-600">Recognition certificates, newspaper features &amp; academic credentials.</div>
           </figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="w-full bg-charcoal pt-12 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm min-w-0">
-        <div class="space-y-2 min-w-0">
-          <div class="font-serif text-2xl font-semibold text-ivory">Jasmin Bhatt</div>
-          <p class="text-xs text-slate-400 leading-relaxed">
+  <!-- Enhanced Footer -->
+  <footer class="w-full bg-gradient-to-b from-charcoal to-charcoalLight/70 pt-12 sm:pt-14 pb-8 border-t-2 border-gold/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7 sm:gap-8 text-sm min-w-0">
+        <div class="space-y-3 min-w-0">
+          <div class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">Jasmin Bhatt</div>
+          <p class="text-xs text-slate-700 leading-relaxed">
             Writer, Director, Actor, Poet, Author, Storyteller, Educator and Tax Consultant from Bhavnagar, Gujarat, India.
           </p>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-stone-300 text-[11px] font-medium text-slate-800">
+            <span class="w-2 h-2 rounded-full bg-gold"></span>
+            <span>Bhavnagar • Gujarat</span>
+          </div>
         </div>
 
-        <div class="space-y-2 min-w-0">
-          <div class="text-xs uppercase tracking-[0.18em] text-gold font-semibold">Pages</div>
-          <ul class="space-y-1.5 text-xs text-slate-300">
-            <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
-            <li><a href="about.html" class="hover:text-gold transition">About, Education &amp; Tax/Law</a></li>
-            <li><a href="works.html" class="hover:text-gold transition">Cinema, OTT, Theatre &amp; Audio</a></li>
-            <li><a href="literature-stories.html" class="hover:text-gold transition">Books, Poetry &amp; Stories</a></li>
-            <li><a href="media-gallery.html" class="hover:text-gold transition">Awards, Press &amp; Gallery</a></li>
-            <li><a href="contact.html" class="hover:text-gold transition">Contact &amp; Security</a></li>
+        <div class="space-y-3 min-w-0">
+          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Pages</div>
+          <ul class="space-y-2 text-xs text-slate-700">
+            <li><a href="index.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Home</a></li>
+            <li><a href="about.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">About, Education &amp; Tax/Law</a></li>
+            <li><a href="works.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Cinema, OTT, Theatre &amp; Audio</a></li>
+            <li><a href="literature-stories.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Books, Poetry &amp; Stories</a></li>
+            <li><a href="media-gallery.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Awards, Press &amp; Gallery</a></li>
+            <li><a href="contact.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Contact &amp; Security</a></li>
           </ul>
         </div>
 
-        <div class="space-y-2 min-w-0">
-          <div class="text-xs uppercase tracking-[0.18em] text-gold font-semibold">Official Links</div>
-          <ul class="space-y-1.5 text-xs text-slate-300 break-words">
-            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">IMDb Profile (nm15420877) ↗</a></li>
-            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">YouTube Poetry Performance ↗</a></li>
-            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
-            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">Love Vs We… (Amazon) ↗</a></li>
+        <div class="space-y-3 min-w-0">
+          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Official Links</div>
+          <ul class="space-y-2 text-xs text-slate-700 break-words">
+            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">IMDb Profile (nm15420877) ↗</a></li>
+            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">YouTube Poetry Performance ↗</a></li>
+            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
+            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Love Vs We… (Amazon) ↗</a></li>
           </ul>
         </div>
 
-        <div class="space-y-2 min-w-0">
-          <div class="text-xs uppercase tracking-[0.18em] text-gold font-semibold">Media &amp; Collaborations</div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Bhavnagar, Gujarat • Gujarati, Hindi &amp; English.
-          </p>
-          <a href="contact.html" class="inline-block pt-1 text-xs font-semibold text-gold hover:underline">
-            Connect For Press &amp; Events →
-          </a>
+        <div class="space-y-3 min-w-0">
+          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Media &amp; Collaborations</div>
+          <div class="rounded-xl bg-white/85 border border-stone-200 p-4 space-y-2 shadow-2xs">
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Bhavnagar, Gujarat • Gujarati, Hindi &amp; English.
+            </p>
+            <a href="contact.html" class="inline-flex items-center gap-1 text-xs font-bold text-gold hover:text-crimsonAccent transition">
+              <span>Connect For Press &amp; Events</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="gold-hairline"></div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
-        <p>© Jasmin Bhatt. All rights reserved.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-xs text-slate-600 text-center sm:text-left">
+        <p class="font-medium text-slate-700">© Jasmin Bhatt. All rights reserved.</p>
         <p>Gujarati • Hindi • English • Bhavnagar, Gujarat</p>
       </div>
     </div>

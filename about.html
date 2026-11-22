@@ -2,15 +2,22 @@
 <html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>About, Education &amp; Tax Practice | Jasmin Bhatt</title>
   <meta name="description" content="Biography, educational qualifications (B.Com., LL.B., LL.M.), ~20 years of taxation &amp; legal consultancy, and academic experience of Jasmin Bhatt from Bhavnagar, Gujarat." />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#FAF7F2" />
+  <link rel="canonical" href="https://www.imdb.com/name/nm15420877/" />
 
   <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Jasmin Bhatt Official Portfolio" />
   <meta property="og:title" content="About, Education &amp; Tax Practice | Jasmin Bhatt" />
   <meta property="og:description" content="Writer, Director, Actor, Poet, Author, Storyteller, Educator and Tax Consultant from Gujarat — spanning literature, cinema, theatre, law, and taxation." />
   <meta property="og:url" content="https://www.imdb.com/name/nm15420877/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About, Education &amp; Tax Practice | Jasmin Bhatt" />
+  <meta name="twitter:description" content="Writer, Director, Actor, Poet, Author, Storyteller, Educator and Tax Consultant from Gujarat — spanning literature, cinema, theatre, law, and taxation." />
 
   <script type="application/ld+json">
   {
@@ -57,13 +64,13 @@
       theme: {
         extend: {
           colors: {
-            obsidian: '#0F1115',
-            charcoal: '#171B22',
-            charcoalLight: '#1E242E',
-            ivory: '#F6F2EA',
+            obsidian: '#FAF7F2',
+            charcoal: '#F1ECE2',
+            charcoalLight: '#E6DFD1',
+            ivory: '#FFFFFF',
             ivoryCard: '#FFFDF9',
-            gold: '#D4AF37',
-            goldLight: '#E8CC73',
+            gold: '#B47B1E',
+            goldLight: '#D49A34',
             crimsonAccent: '#8C3B2B'
           },
           fontFamily: {
@@ -76,50 +83,167 @@
   </script>
 
   <style>
+    html,
     body {
       overflow-x: hidden;
+      background-color: #FAF7F2;
+      color: #1E293B;
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-tap-highlight-color: rgba(180, 123, 30, 0.16);
     }
+    a,
+    button {
+      touch-action: manipulation;
+    }
+
+    /* Slow-Network / Tailwind CDN Fallback Layer (Light Theme) */
+    .max-w-7xl {
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    @media (min-width: 768px) {
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+      .md\:grid-cols-12 {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+      }
+      .md\:col-span-4 {
+        grid-column: span 4 / span 4;
+      }
+      .md\:col-span-8 {
+        grid-column: span 8 / span 8;
+      }
+    }
+    .font-serif {
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    }
+    .text-gold {
+      color: #B47B1E;
+    }
+    .text-crimsonAccent {
+      color: #8C3B2B;
+    }
+    .bg-gold {
+      background-color: #B47B1E;
+      color: #FFFFFF;
+    }
+    .bg-charcoal {
+      background-color: #F1ECE2;
+    }
+    .bg-ivoryCard {
+      background-color: #FFFDF9;
+    }
+    .rounded-2xl {
+      border-radius: 1rem;
+    }
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+    .shadow-xs {
+      box-shadow: 0 1px 3px rgba(24, 24, 27, 0.06);
+    }
+
     .gold-hairline {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.65), transparent);
+      background: linear-gradient(90deg, transparent, rgba(180, 123, 30, 0.55), transparent);
     }
     .luxury-card {
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.32s ease, box-shadow 0.32s ease, background-color 0.32s ease;
     }
-    .luxury-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(212, 175, 55, 0.55);
-      box-shadow: 0 18px 40px -15px rgba(0, 0, 0, 0.65);
+    .luxury-card:active {
+      transform: scale(0.99);
+      border-color: #B47B1E;
+    }
+    .credential-card {
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease;
+    }
+    .portrait-box {
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .portrait-box img {
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .nav-link-hover {
+      position: relative;
+      transition: color 0.25s ease;
+    }
+    .nav-link-hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: #B47B1E;
+      transition: width 0.25s ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .luxury-card:hover {
+        transform: translateY(-6px);
+        border-color: #B47B1E;
+        box-shadow: 0 22px 42px -14px rgba(180, 123, 30, 0.22), 0 8px 18px -10px rgba(24, 24, 27, 0.12);
+      }
+      .credential-card:hover {
+        transform: translateY(-5px);
+        border-color: #B47B1E;
+        background-color: #FFFFFF;
+        box-shadow: 0 18px 34px -14px rgba(140, 59, 43, 0.16);
+      }
+      .portrait-box:hover {
+        transform: translateY(-3px);
+      }
+      .portrait-box:hover img {
+        transform: scale(1.03);
+      }
+      .nav-link-hover:hover::after {
+        width: 100%;
+      }
     }
   </style>
 </head>
-<body class="bg-obsidian text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-obsidian">
+<body class="bg-obsidian text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-white">
 
   <!-- Top Scroll Progress Bar -->
   <div id="scroll-progress" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-goldLight via-gold to-crimsonAccent z-[60] transition-[width] duration-150"></div>
 
   <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 w-full bg-obsidian/95 backdrop-blur-md border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3.5 flex items-center justify-between gap-3 min-w-0">
-      <a href="index.html" class="flex flex-col min-w-0 shrink-0">
-        <span class="font-serif text-xl sm:text-2xl md:text-[26px] font-semibold tracking-wide text-ivory leading-none">
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3.5 flex items-center justify-between gap-2.5 sm:gap-3 min-w-0">
+      <a href="index.html" class="flex flex-col min-w-0 shrink group">
+        <span class="font-serif text-lg sm:text-2xl md:text-[26px] font-semibold tracking-wide text-slate-900 group-hover:text-gold transition leading-none truncate">
           Jasmin Bhatt
         </span>
-        <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-gold mt-1">
+        <span class="text-[9px] sm:text-[11px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold mt-1 font-semibold truncate">
           Bhavnagar • Gujarat
         </span>
       </a>
 
-      <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm text-slate-300">
-        <a href="index.html" class="hover:text-gold transition whitespace-nowrap">Home</a>
-        <a href="about.html" class="text-gold font-semibold border-b border-gold pb-0.5 whitespace-nowrap">About &amp; Practice</a>
-        <a href="works.html" class="hover:text-gold transition whitespace-nowrap">Cinema &amp; Stage</a>
-        <a href="literature-stories.html" class="hover:text-gold transition whitespace-nowrap">Books &amp; Poetry</a>
-        <a href="media-gallery.html" class="hover:text-gold transition whitespace-nowrap">Media &amp; Gallery</a>
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm text-slate-600">
+        <a href="index.html" class="nav-link-hover hover:text-slate-950 whitespace-nowrap">Home</a>
+        <a href="about.html" class="text-slate-950 font-semibold border-b-2 border-gold pb-0.5 whitespace-nowrap">About &amp; Practice</a>
+        <a href="works.html" class="nav-link-hover hover:text-slate-950 whitespace-nowrap">Cinema &amp; Stage</a>
+        <a href="literature-stories.html" class="nav-link-hover hover:text-slate-950 whitespace-nowrap">Books &amp; Poetry</a>
+        <a href="media-gallery.html" class="nav-link-hover hover:text-slate-950 whitespace-nowrap">Media &amp; Gallery</a>
       </nav>
 
       <div class="flex items-center gap-2 shrink-0">
-        <a href="contact.html" class="px-3.5 py-2 md:px-4 md:py-2 rounded-full bg-gold text-obsidian text-xs font-semibold hover:bg-goldLight transition whitespace-nowrap">
+        <a href="contact.html" class="px-3.5 py-2.5 md:px-4 md:py-2 rounded-full bg-gold text-white text-xs font-semibold hover:bg-crimsonAccent active:scale-[0.98] md:hover:-translate-y-0.5 transition duration-200 whitespace-nowrap shadow-xs">
           Collaborate
         </a>
         <button
@@ -127,44 +251,44 @@
           type="button"
           aria-label="Open Navigation Menu"
           aria-expanded="false"
-          class="md:hidden w-9 h-9 rounded-lg border border-white/15 bg-charcoal text-ivory flex items-center justify-center text-base hover:border-gold/60 transition"
+          class="md:hidden w-10 h-10 rounded-lg border border-stone-300 bg-ivoryCard text-slate-900 flex items-center justify-center text-base hover:border-gold hover:bg-charcoal active:scale-95 transition"
         >
           ☰
         </button>
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-t border-white/10 px-4 py-4 space-y-2 text-sm">
-      <a href="index.html" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-gold transition">Home</a>
-      <a href="about.html" class="block py-2 px-3 rounded-lg bg-white/5 text-gold font-medium">About, Education &amp; Tax/Law</a>
-      <a href="works.html" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-gold transition">Cinema, OTT, Theatre &amp; Audio</a>
-      <a href="literature-stories.html" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-gold transition">Books, Poetry &amp; Stories</a>
-      <a href="media-gallery.html" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-gold transition">Awards, Press &amp; Gallery</a>
-      <a href="contact.html" class="block py-2 px-3 rounded-lg text-gold hover:bg-white/5 transition">Contact &amp; Security</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-ivoryCard border-t border-stone-200 px-4 py-4 space-y-1.5 text-sm shadow-md">
+      <a href="index.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Home</a>
+      <a href="about.html" class="block py-2.5 px-3.5 rounded-lg bg-charcoal text-slate-950 font-semibold">About, Education &amp; Tax/Law</a>
+      <a href="works.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Cinema, OTT, Theatre &amp; Audio</a>
+      <a href="literature-stories.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Books, Poetry &amp; Stories</a>
+      <a href="media-gallery.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Awards, Press &amp; Gallery</a>
+      <a href="contact.html" class="block py-2.5 px-3.5 rounded-lg text-gold font-medium hover:bg-charcoal transition">Contact &amp; Security</a>
     </div>
   </header>
 
   <!-- Page Hero / Biography -->
-  <section class="w-full py-12 sm:py-16 md:py-20 border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-start">
-      <div class="md:col-span-8 space-y-5 min-w-0">
-        <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-charcoal border border-gold/30 text-gold text-[11px] sm:text-xs">
+  <section class="w-full py-10 sm:py-16 md:py-20 border-b border-stone-200/90 bg-gradient-to-b from-white via-obsidian to-charcoal/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-7 sm:gap-8 md:gap-10 items-start">
+      <div class="md:col-span-8 space-y-4 sm:space-y-5 min-w-0">
+        <div class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white border border-gold/40 text-gold text-[10px] sm:text-xs font-semibold shadow-2xs">
           <span>Biography &amp; Creative Journey</span>
-          <span class="text-white/30">•</span>
+          <span class="text-stone-300">•</span>
           <span>Bhavnagar, Gujarat, India</span>
-          <span class="text-white/30">•</span>
+          <span class="text-stone-300">•</span>
           <span>Gujarati, Hindi &amp; English</span>
         </div>
 
-        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold text-ivory leading-[1.08] break-words">
+        <h1 class="font-serif text-[34px] sm:text-5xl md:text-6xl font-semibold text-slate-950 leading-[1.08] sm:leading-[1.06] tracking-tight break-words">
           Jasmin Bhatt — <span class="text-gold italic">Storyteller, Artist &amp; Legal/Tax Mind.</span>
         </h1>
 
-        <p class="text-xs sm:text-sm font-medium uppercase tracking-wider text-gold/90 leading-relaxed">
+        <p class="text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.11em] sm:tracking-[0.14em] text-crimsonAccent leading-relaxed">
           Writer | Director | Actor | Poet | Author | Storyteller | Educator | Tax Consultant
         </p>
 
-        <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+        <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
           <p>
             Jasmin Bhatt is an Indian Writer, Director, Actor, Poet, Novelist, Storyteller, Educator, and Tax Consultant from Bhavnagar, Gujarat, India. His creative journey encompasses literature, poetry, theatre, filmmaking, storytelling, and digital entertainment.
           </p>
@@ -179,36 +303,48 @@
 
       <!-- Quick Profile Card -->
       <aside class="md:col-span-4 min-w-0">
-        <div class="luxury-card rounded-2xl bg-charcoal border border-gold/30 p-6 space-y-4">
-          <div class="text-xs uppercase tracking-[0.18em] text-gold font-semibold">Profile Snapshot</div>
-          <dl class="space-y-3 text-xs sm:text-sm border-t border-white/10 pt-4">
+        <div class="luxury-card rounded-2xl bg-white border border-stone-200/90 p-5 sm:p-6 space-y-4 shadow-xs">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Profile Snapshot</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-gold/15 text-gold text-[10px] font-bold uppercase tracking-wider">Dossier</span>
+          </div>
+
+          <div class="portrait-box rounded-xl overflow-hidden border border-stone-200 bg-charcoal aspect-[4/5] w-full">
+            <img
+              src="assets/media/portrait/jasmin-bhatt-profile.jpeg"
+              alt="Jasmin Bhatt — Official Portrait"
+              class="w-full h-full object-cover object-top"
+            />
+          </div>
+
+          <dl class="space-y-3 text-xs sm:text-sm border-t border-stone-200 pt-4">
             <div class="flex flex-col gap-0.5">
-              <dt class="text-slate-400 text-xs">Name</dt>
-              <dd class="text-ivory font-medium">Jasmin Bhatt</dd>
+              <dt class="text-slate-500 text-xs font-medium">Name</dt>
+              <dd class="text-slate-950 font-semibold">Jasmin Bhatt</dd>
             </div>
             <div class="flex flex-col gap-0.5">
-              <dt class="text-slate-400 text-xs">Location</dt>
-              <dd class="text-ivory font-medium">Bhavnagar, Gujarat, India</dd>
+              <dt class="text-slate-500 text-xs font-medium">Location</dt>
+              <dd class="text-slate-950 font-semibold">Bhavnagar, Gujarat, India</dd>
             </div>
             <div class="flex flex-col gap-0.5">
-              <dt class="text-slate-400 text-xs">Languages</dt>
-              <dd class="text-ivory font-medium">Gujarati, Hindi and English</dd>
+              <dt class="text-slate-500 text-xs font-medium">Languages</dt>
+              <dd class="text-slate-950 font-semibold">Gujarati, Hindi and English</dd>
             </div>
             <div class="flex flex-col gap-0.5">
-              <dt class="text-slate-400 text-xs">Storytelling Initiative</dt>
-              <dd class="text-ivory font-medium">Kahaniyaan (YouTube: kahaniyaan98)</dd>
+              <dt class="text-slate-500 text-xs font-medium">Storytelling Initiative</dt>
+              <dd class="text-slate-950 font-semibold">Kahaniyaan (YouTube: kahaniyaan98)</dd>
             </div>
             <div class="flex flex-col gap-0.5">
-              <dt class="text-slate-400 text-xs">IMDb Profile</dt>
+              <dt class="text-slate-500 text-xs font-medium">IMDb Profile</dt>
               <dd class="break-all">
-                <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline font-medium">
+                <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="text-crimsonAccent hover:text-gold font-semibold transition">
                   imdb.com/name/nm15420877 ↗
                 </a>
               </dd>
             </div>
           </dl>
           <div class="pt-2">
-            <a href="contact.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-gold text-obsidian text-xs sm:text-sm font-semibold hover:bg-goldLight transition">
+            <a href="contact.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-gold text-white text-xs sm:text-sm font-semibold hover:bg-crimsonAccent active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-xs">
               Connect &amp; Collaborate
             </a>
           </div>
@@ -217,21 +353,21 @@
     </div>
   </section>
 
-  <!-- Educational Background (Ivory Contrast Band) -->
-  <section class="w-full bg-ivory text-slate-900 py-14 sm:py-16 md:py-20">
+  <!-- Educational Background (Crisp Light Contrast Band) -->
+  <section class="w-full bg-ivory text-slate-900 py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8">
       <div class="max-w-3xl">
-        <span class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-semibold">Educational Background</span>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1">
+        <span class="text-xs uppercase tracking-[0.22em] text-crimsonAccent font-bold">Educational Background</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1 leading-tight">
           Commerce &amp; Legal Qualifications
         </h2>
-        <p class="text-sm sm:text-base text-slate-700 mt-2">
+        <p class="text-sm sm:text-base text-slate-700 mt-2 leading-relaxed">
           A strong academic foundation in commerce and law supporting years of taxation advisory and legal understanding.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <article class="bg-ivoryCard rounded-2xl p-6 sm:p-7 border border-stone-200 shadow-sm min-w-0">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+        <article class="credential-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border border-stone-200 border-t-4 border-t-gold shadow-xs min-w-0">
           <div class="text-xs font-bold uppercase tracking-wider text-crimsonAccent">2004</div>
           <h3 class="font-serif text-2xl font-semibold text-slate-950 mt-1">Bachelor of Commerce (B.Com.)</h3>
           <p class="text-sm text-slate-700 mt-2 leading-relaxed">
@@ -239,7 +375,7 @@
           </p>
         </article>
 
-        <article class="bg-ivoryCard rounded-2xl p-6 sm:p-7 border border-stone-200 shadow-sm min-w-0">
+        <article class="credential-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border border-stone-200 border-t-4 border-t-crimsonAccent shadow-xs min-w-0">
           <div class="text-xs font-bold uppercase tracking-wider text-crimsonAccent">2007 • Bhavnagar University</div>
           <h3 class="font-serif text-2xl font-semibold text-slate-950 mt-1">Bachelor of Laws (LL.B.)</h3>
           <p class="text-sm text-slate-700 mt-2 leading-relaxed">
@@ -247,7 +383,7 @@
           </p>
         </article>
 
-        <article class="bg-ivoryCard rounded-2xl p-6 sm:p-7 border border-stone-200 shadow-sm min-w-0">
+        <article class="credential-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border border-stone-200 border-t-4 border-t-gold shadow-xs min-w-0">
           <div class="text-xs font-bold uppercase tracking-wider text-crimsonAccent">2017 • Sardar Patel University</div>
           <h3 class="font-serif text-2xl font-semibold text-slate-950 mt-1">Master of Laws (LL.M.)</h3>
           <p class="text-sm text-slate-700 mt-2 leading-relaxed">
@@ -259,18 +395,20 @@
   </section>
 
   <!-- Tax Consultancy, Legal Profession & Academic Experience -->
-  <section class="w-full py-14 sm:py-16 md:py-20 border-b border-white/10">
+  <section class="w-full bg-obsidian py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
       <!-- Tax & Legal Profession -->
-      <article class="luxury-card rounded-2xl bg-charcoal border border-white/10 p-6 sm:p-8 space-y-4 min-w-0">
-        <span class="text-xs uppercase tracking-[0.2em] text-gold font-semibold">Tax Consultancy &amp; Legal Profession</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ivory">
+      <article class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-8 space-y-4 min-w-0 shadow-xs">
+        <span class="inline-block px-2.5 py-0.5 rounded-full bg-crimsonAccent/10 text-[11px] uppercase tracking-[0.16em] text-crimsonAccent font-bold">
+          Tax Consultancy &amp; Legal Profession
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-slate-950 leading-tight">
           Approximately 20 Years in Taxation &amp; Law
         </h2>
-        <p class="text-sm text-slate-300 leading-relaxed">
-          Jasmin Bhatt has been associated with taxation and legal consultancy for approximately 20 years. He began his professional journey under the guidance of <strong class="text-ivory font-semibold">Jagrut J. Desai, Advocate</strong>, developing deep experience in taxation and related legal matters.
+        <p class="text-sm text-slate-700 leading-relaxed">
+          Jasmin Bhatt has been associated with taxation and legal consultancy for approximately 20 years. He began his professional journey under the guidance of <strong class="text-slate-950 font-semibold">Jagrut J. Desai, Advocate</strong>, developing deep experience in taxation and related legal matters.
         </p>
-        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 pt-1">
+        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 pt-1">
           <li class="flex items-start gap-2.5">
             <span class="text-gold font-bold">•</span>
             <span>Tax Consultant with approximately 20 years of professional experience.</span>
@@ -287,27 +425,29 @@
       </article>
 
       <!-- Academic Experience -->
-      <article class="luxury-card rounded-2xl bg-charcoal border border-white/10 p-6 sm:p-8 space-y-4 min-w-0">
-        <span class="text-xs uppercase tracking-[0.2em] text-gold font-semibold">Academic Experience</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ivory">
+      <article class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-8 space-y-4 min-w-0 shadow-xs">
+        <span class="inline-block px-2.5 py-0.5 rounded-full bg-gold/15 text-[11px] uppercase tracking-[0.16em] text-gold font-bold">
+          Academic Experience
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-slate-950 leading-tight">
           Educator &amp; Visiting Faculty
         </h2>
-        <p class="text-sm text-slate-300 leading-relaxed">
+        <p class="text-sm text-slate-700 leading-relaxed">
           Alongside practice and creative storytelling, he has contributed to commerce and taxation education through visiting faculty assignments in Bhavnagar.
         </p>
         <div class="space-y-4 pt-1">
-          <div class="rounded-xl bg-charcoalLight border border-white/10 p-4">
-            <div class="text-xs font-semibold text-gold">Since 2011</div>
-            <h3 class="font-serif text-xl text-ivory mt-0.5">Visiting Faculty in Taxation</h3>
-            <p class="text-xs sm:text-sm text-slate-300 mt-1">
+          <div class="credential-card rounded-xl bg-ivoryCard border border-stone-200 p-4">
+            <div class="text-xs font-bold uppercase tracking-wider text-crimsonAccent">Since 2011</div>
+            <h3 class="font-serif text-xl font-semibold text-slate-950 mt-0.5">Visiting Faculty in Taxation</h3>
+            <p class="text-xs sm:text-sm text-slate-700 mt-1">
               Department of Commerce, Nandkunvarba Mahila College, Bhavnagar.
             </p>
           </div>
 
-          <div class="rounded-xl bg-charcoalLight border border-white/10 p-4">
-            <div class="text-xs font-semibold text-gold">2013–2015</div>
-            <h3 class="font-serif text-xl text-ivory mt-0.5">Visiting Faculty — Diploma in Taxation Law</h3>
-            <p class="text-xs sm:text-sm text-slate-300 mt-1">
+          <div class="credential-card rounded-xl bg-ivoryCard border border-stone-200 p-4">
+            <div class="text-xs font-bold uppercase tracking-wider text-crimsonAccent">2013–2015</div>
+            <h3 class="font-serif text-xl font-semibold text-slate-950 mt-0.5">Visiting Faculty — Diploma in Taxation Law</h3>
+            <p class="text-xs sm:text-sm text-slate-700 mt-1">
               Bhavnagar University.
             </p>
           </div>
@@ -316,54 +456,61 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="w-full bg-charcoal pt-12 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm min-w-0">
-        <div class="space-y-2 min-w-0">
-          <div class="font-serif text-2xl font-semibold text-ivory">Jasmin Bhatt</div>
-          <p class="text-xs text-slate-400 leading-relaxed">
+  <!-- Enhanced Footer -->
+  <footer class="w-full bg-gradient-to-b from-charcoal to-charcoalLight/70 pt-12 sm:pt-14 pb-8 border-t-2 border-gold/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7 sm:gap-8 text-sm min-w-0">
+        <div class="space-y-3 min-w-0">
+          <div class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">Jasmin Bhatt</div>
+          <p class="text-xs text-slate-700 leading-relaxed">
             Writer, Director, Actor, Poet, Author, Storyteller, Educator and Tax Consultant from Bhavnagar, Gujarat, India.
           </p>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-stone-300 text-[11px] font-medium text-slate-800">
+            <span class="w-2 h-2 rounded-full bg-gold"></span>
+            <span>Bhavnagar • Gujarat</span>
+          </div>
         </div>
 
-        <div class="space-y-2 min-w-0">
-          <div class="text-xs uppercase tracking-[0.18em] text-gold font-semibold">Pages</div>
-          <ul class="space-y-1.5 text-xs text-slate-300">
-            <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
-            <li><a href="about.html" class="hover:text-gold transition">About, Education &amp; Tax/Law</a></li>
-            <li><a href="works.html" class="hover:text-gold transition">Cinema, OTT, Theatre &amp; Audio</a></li>
-            <li><a href="literature-stories.html" class="hover:text-gold transition">Books, Poetry &amp; Stories</a></li>
-            <li><a href="media-gallery.html" class="hover:text-gold transition">Awards, Press &amp; Gallery</a></li>
-            <li><a href="contact.html" class="hover:text-gold transition">Contact &amp; Security</a></li>
+        <div class="space-y-3 min-w-0">
+          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Pages</div>
+          <ul class="space-y-2 text-xs text-slate-700">
+            <li><a href="index.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Home</a></li>
+            <li><a href="about.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">About, Education &amp; Tax/Law</a></li>
+            <li><a href="works.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Cinema, OTT, Theatre &amp; Audio</a></li>
+            <li><a href="literature-stories.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Books, Poetry &amp; Stories</a></li>
+            <li><a href="media-gallery.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Awards, Press &amp; Gallery</a></li>
+            <li><a href="contact.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Contact &amp; Security</a></li>
           </ul>
         </div>
 
-        <div class="space-y-2 min-w-0">
-          <div class="text-xs uppercase tracking-[0.18em] text-gold font-semibold">Official Links</div>
-          <ul class="space-y-1.5 text-xs text-slate-300 break-words">
-            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">IMDb Profile (nm15420877) ↗</a></li>
-            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">YouTube Poetry Performance ↗</a></li>
-            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
-            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition">Love Vs We… (Amazon) ↗</a></li>
+        <div class="space-y-3 min-w-0">
+          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Official Links</div>
+          <ul class="space-y-2 text-xs text-slate-700 break-words">
+            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">IMDb Profile (nm15420877) ↗</a></li>
+            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">YouTube Poetry Performance ↗</a></li>
+            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
+            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Love Vs We… (Amazon) ↗</a></li>
           </ul>
         </div>
 
-        <div class="space-y-2 min-w-0">
-          <div class="text-xs uppercase tracking-[0.18em] text-gold font-semibold">Enquiries</div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            For creative collaborations, literary/poetry events, academic discussions, and professional enquiries.
-          </p>
-          <a href="contact.html" class="inline-block pt-1 text-xs font-semibold text-gold hover:underline">
-            Go To Contact Page →
-          </a>
+        <div class="space-y-3 min-w-0">
+          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Enquiries</div>
+          <div class="rounded-xl bg-white/85 border border-stone-200 p-4 space-y-2.5 shadow-2xs">
+            <p class="text-xs text-slate-700 leading-relaxed">
+              For creative collaborations, literary/poetry events, academic discussions, and professional enquiries.
+            </p>
+            <a href="contact.html" class="inline-flex items-center gap-1 py-0.5 text-xs font-bold text-gold hover:text-crimsonAccent transition">
+              <span>Go To Contact Page</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="gold-hairline"></div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
-        <p>© Jasmin Bhatt. All rights reserved.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-xs text-slate-600 text-center sm:text-left">
+        <p class="font-medium text-slate-700">© Jasmin Bhatt. All rights reserved.</p>
         <p>Gujarati • Hindi • English • Bhavnagar, Gujarat</p>
       </div>
     </div>
