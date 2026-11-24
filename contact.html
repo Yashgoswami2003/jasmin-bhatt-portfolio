@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Contact, Collaborations &amp; Security | Jasmin Bhatt</title>
   <meta name="description" content="Connect with Jasmin Bhatt for film &amp; OTT productions, books &amp; poetry events, tax &amp; legal advisory, academic sessions, and media collaborations." />
+  <meta name="keywords" content="Jasmin Bhatt, Contact Jasmin Bhatt, Film Collaborations, OTT Enquiries, Bhavnagar, Gujarat, Tax Advisory, Literary Events, IMDb" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#FAF7F2" />
+  <meta name="theme-color" content="#121B2E" />
   <link rel="canonical" href="https://www.imdb.com/name/nm15420877/" />
 
   <meta property="og:type" content="website" />
@@ -24,6 +25,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Jasmin Bhatt",
+    "url": "https://www.imdb.com/name/nm15420877/",
     "jobTitle": [
       "Writer",
       "Director",
@@ -60,13 +62,13 @@
       theme: {
         extend: {
           colors: {
-            obsidian: '#FAF7F2',
-            charcoal: '#F1ECE2',
-            charcoalLight: '#E6DFD1',
-            ivory: '#FFFFFF',
-            ivoryCard: '#FFFDF9',
+            obsidian: '#F7F3EA',
+            charcoal: '#EFE8DA',
+            charcoalLight: '#E3D8C3',
+            ivory: '#FFFDF9',
+            ivoryCard: '#FFFFFF',
             gold: '#B47B1E',
-            goldLight: '#D49A34',
+            goldLight: '#E0A83E',
             crimsonAccent: '#8C3B2B'
           },
           fontFamily: {
@@ -81,11 +83,16 @@
   <style>
     html,
     body {
-      overflow-x: hidden;
-      background-color: #FAF7F2;
+      overflow-x: clip;
+      background-color: #F7F3EA;
+      background-image:
+        radial-gradient(ellipse 85% 45% at 15% 0%, rgba(180, 123, 30, 0.14), transparent 62%),
+        radial-gradient(ellipse 70% 42% at 88% 12%, rgba(140, 59, 43, 0.08), transparent 60%),
+        radial-gradient(ellipse 75% 45% at 50% 62%, rgba(224, 168, 62, 0.10), transparent 65%),
+        linear-gradient(180deg, #FAF7F0 0%, #F3EDE0 55%, #E9DFC9 100%);
       color: #1E293B;
       font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      -webkit-tap-highlight-color: rgba(180, 123, 30, 0.16);
+      -webkit-tap-highlight-color: rgba(180, 123, 30, 0.18);
     }
     a,
     button,
@@ -95,7 +102,7 @@
       touch-action: manipulation;
     }
 
-    /* Slow-Network / Tailwind CDN Fallback Layer (Light Theme) */
+    /* Slow-Network / Tailwind CDN Fallback Layer */
     .max-w-7xl {
       max-width: 80rem;
       margin-left: auto;
@@ -144,10 +151,10 @@
       color: #FFFFFF;
     }
     .bg-charcoal {
-      background-color: #F1ECE2;
+      background-color: #EFE8DA;
     }
     .bg-ivoryCard {
-      background-color: #FFFDF9;
+      background-color: #FFFFFF;
     }
     .rounded-2xl {
       border-radius: 1rem;
@@ -156,23 +163,42 @@
       border-radius: 0.75rem;
     }
     .shadow-xs {
-      box-shadow: 0 1px 3px rgba(24, 24, 27, 0.06);
+      box-shadow: 0 2px 6px rgba(24, 24, 27, 0.07);
     }
 
     .gold-hairline {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(180, 123, 30, 0.55), transparent);
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(246, 199, 107, 0.9), rgba(224, 168, 62, 1), rgba(246, 199, 107, 0.9), transparent);
     }
     .luxury-card {
       position: relative;
-      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.32s ease, box-shadow 0.32s ease, background-color 0.32s ease;
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF8 100%);
+      border: 1px solid rgba(180, 123, 30, 0.28);
+      border-top: 4px solid #B47B1E;
+      box-shadow: 0 16px 34px -12px rgba(15, 23, 42, 0.14), 0 4px 10px rgba(180, 123, 30, 0.10);
+      transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.34s ease, box-shadow 0.34s ease;
+    }
+    .luxury-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at top right, rgba(224, 168, 62, 0.13), transparent 50%);
+      pointer-events: none;
+    }
+    .luxury-card > * {
+      position: relative;
+      z-index: 1;
     }
     .luxury-card:active {
       transform: scale(0.99);
-      border-color: #B47B1E;
+      border-color: #8C3B2B;
     }
     .link-row-card,
     .charter-card {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF8 100%);
+      border: 1px solid rgba(180, 123, 30, 0.24);
+      box-shadow: 0 10px 24px -10px rgba(15, 23, 42, 0.10), 0 2px 6px rgba(180, 123, 30, 0.07);
       transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
     }
     .field-control {
@@ -182,7 +208,7 @@
       outline: none;
       border-color: #B47B1E;
       background-color: #FFFFFF;
-      box-shadow: 0 0 0 3px rgba(180, 123, 30, 0.16);
+      box-shadow: 0 0 0 3px rgba(180, 123, 30, 0.18);
     }
     .nav-link-hover {
       position: relative;
@@ -195,26 +221,26 @@
       bottom: -4px;
       width: 0;
       height: 2px;
-      background-color: #B47B1E;
+      background: linear-gradient(90deg, #B47B1E, #E0A83E);
       transition: width 0.25s ease;
     }
     @media (hover: hover) and (pointer: fine) {
       .luxury-card:hover {
         transform: translateY(-6px);
         border-color: #B47B1E;
-        box-shadow: 0 22px 42px -14px rgba(180, 123, 30, 0.22), 0 8px 18px -10px rgba(24, 24, 27, 0.12);
+        box-shadow: 0 26px 48px -14px rgba(180, 123, 30, 0.28), 0 12px 24px -10px rgba(15, 23, 42, 0.15);
       }
       .link-row-card:hover {
-        transform: translateY(-2px);
+        transform: translateY(-3px);
         border-color: #B47B1E;
-        background-color: #FFFFFF;
-        box-shadow: 0 10px 22px -12px rgba(180, 123, 30, 0.22);
+        background: #FFFFFF;
+        box-shadow: 0 16px 28px -12px rgba(180, 123, 30, 0.24);
       }
       .charter-card:hover {
         transform: translateY(-5px);
         border-color: #B47B1E;
-        background-color: #FFFFFF;
-        box-shadow: 0 18px 34px -14px rgba(140, 59, 43, 0.16);
+        background: #FFFFFF;
+        box-shadow: 0 20px 36px -12px rgba(180, 123, 30, 0.22), 0 8px 18px -10px rgba(140, 59, 43, 0.14);
       }
       .field-control:hover {
         border-color: rgba(180, 123, 30, 0.65);
@@ -223,28 +249,11 @@
         width: 100%;
       }
     }
-  
+
 /* === AUTO-MOBILE-IMAGE-FIX-START === */
-/* Classy, Elegant & Premium Editorial Background */
-body {
-  background-color: #F6F2EA !important;
-  background-image:
-    radial-gradient(circle at 12% 8%, rgba(180, 138, 66, 0.08), transparent 42%),
-    radial-gradient(circle at 88% 14%, rgba(128, 34, 44, 0.05), transparent 38%),
-    linear-gradient(180deg, #F8F5EE 0%, #F3EEE3 55%, #EFE9DC 100%) !important;
-  background-attachment: fixed;
-}
-
-section.bg-white,
-section.bg-cream,
-div.bg-white,
-div.bg-cream {
-  background-color: rgba(255, 253, 249, 0.88);
-}
-
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -256,6 +265,28 @@ html, body {
 img, picture, svg, video, iframe {
   display: block;
   max-width: 100%;
+}
+
+.hero-spotlight {
+  position: relative;
+  background:
+    radial-gradient(ellipse 75% 65% at 88% 18%, rgba(224, 168, 62, 0.26), transparent 58%),
+    radial-gradient(ellipse 70% 60% at 12% 90%, rgba(140, 59, 43, 0.30), transparent 60%),
+    linear-gradient(135deg, #121B2E 0%, #1B2944 52%, #271C26 100%) !important;
+  color: #F8FAFC !important;
+  border-bottom: 2px solid rgba(224, 168, 62, 0.65) !important;
+  box-shadow: 0 24px 55px -20px rgba(15, 23, 42, 0.38) !important;
+}
+
+.hero-spotlight h1,
+.hero-spotlight h2,
+.hero-spotlight strong {
+  color: #FFFFFF !important;
+}
+
+.hero-spotlight h1 span.italic {
+  color: #F6C76B !important;
+  text-shadow: 0 2px 18px rgba(246, 199, 107, 0.28);
 }
 
 /* Portrait: clean top-focused framing across mobile & desktop */
@@ -326,14 +357,15 @@ div:has(> img[src*="assets/media/gallery/"]) {
   }
 
   h1 {
-    font-size: clamp(1.9rem, 8vw, 2.55rem) !important;
-    line-height: 1.12 !important;
+    font-size: clamp(2rem, 8.2vw, 2.7rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.015em;
     word-break: break-word;
   }
 
   h2 {
-    font-size: clamp(1.55rem, 6.4vw, 2.1rem) !important;
-    line-height: 1.16 !important;
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem) !important;
+    line-height: 1.15 !important;
     word-break: break-word;
   }
 
@@ -341,8 +373,8 @@ div:has(> img[src*="assets/media/gallery/"]) {
     word-break: break-word;
   }
 
-  a, button {
-    min-height: 40px;
+  a, button, input, select, textarea {
+    min-height: 42px;
   }
 
   img[src*="assets/media/books/"] {
@@ -358,16 +390,15 @@ div:has(> img[src*="assets/media/gallery/"]) {
   }
 }
 /* === AUTO-MOBILE-IMAGE-FIX-END === */
-
   </style>
 </head>
-<body class="bg-obsidian text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-white">
+<body class="bg-obsidian text-slate-800 font-sans antialiased overflow-x-clip selection:bg-gold selection:text-white">
 
   <!-- Top Scroll Progress Bar -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-goldLight via-gold to-crimsonAccent z-[60] transition-[width] duration-150"></div>
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[2.5px] w-0 bg-gradient-to-r from-goldLight via-amber-300 to-crimsonAccent z-[60] transition-[width] duration-150"></div>
 
   <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs">
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-amber-900/15 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3.5 flex items-center justify-between gap-2.5 sm:gap-3 min-w-0">
       <a href="index.html" class="flex flex-col min-w-0 shrink group">
         <span class="font-serif text-lg sm:text-2xl md:text-[26px] font-semibold tracking-wide text-slate-900 group-hover:text-gold transition leading-none truncate">
@@ -387,7 +418,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
       </nav>
 
       <div class="flex items-center gap-2 shrink-0">
-        <a href="contact.html" class="px-3.5 py-2.5 md:px-4 md:py-2 rounded-full bg-gold text-white text-xs font-semibold hover:bg-crimsonAccent active:scale-[0.98] md:hover:-translate-y-0.5 transition duration-200 whitespace-nowrap shadow-xs">
+        <a href="contact.html" class="px-3.5 py-2.5 md:px-4 md:py-2 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/40 text-xs font-bold hover:bg-amber-500 hover:text-slate-950 active:scale-[0.98] md:hover:-translate-y-0.5 transition duration-200 whitespace-nowrap shadow-xs">
           Collaborate
         </a>
         <button
@@ -408,44 +439,44 @@ div:has(> img[src*="assets/media/gallery/"]) {
       <a href="works.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Cinema, OTT, Theatre &amp; Audio</a>
       <a href="literature-stories.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Books, Poetry &amp; Stories</a>
       <a href="media-gallery.html" class="block py-2.5 px-3.5 rounded-lg text-slate-700 hover:bg-charcoal hover:text-slate-950 transition">Awards, Press &amp; Gallery</a>
-      <a href="contact.html" class="block py-2.5 px-3.5 rounded-lg bg-charcoal text-gold font-semibold">Contact &amp; Security</a>
+      <a href="contact.html" class="block py-2.5 px-3.5 rounded-lg bg-[#121B2E] text-amber-300 font-semibold">Contact &amp; Security</a>
     </div>
   </header>
 
-  <!-- Contact Hero -->
-  <section class="w-full py-10 sm:py-16 md:py-20 border-b border-stone-200/90 bg-gradient-to-b from-white via-obsidian to-charcoal/50">
+  <!-- Contact Hero (Signature Spotlight) -->
+  <section class="hero-spotlight relative w-full py-10 sm:py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-4 max-w-4xl">
-      <div class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white border border-gold/40 text-gold text-[10px] sm:text-xs font-semibold shadow-2xs">
+      <div class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-amber-300/45 text-amber-200 text-[10px] sm:text-xs font-semibold shadow-sm backdrop-blur-xs">
         <span>Enquiries &amp; Collaborations</span>
-        <span class="text-stone-300">•</span>
+        <span class="text-amber-200/40">•</span>
         <span>Bhavnagar, Gujarat, India</span>
       </div>
 
-      <h1 class="font-serif text-[34px] sm:text-5xl md:text-6xl font-semibold text-slate-950 leading-[1.08] sm:leading-[1.06] tracking-tight break-words">
-        Direct &amp; Dignified <span class="text-gold italic">Collaborations Across Art, Media &amp; Advisory.</span>
+      <h1 class="font-serif text-[34px] sm:text-5xl md:text-6xl font-semibold text-white leading-[1.08] sm:leading-[1.06] tracking-tight break-words">
+        Direct &amp; Dignified <span class="text-amber-300 italic">Collaborations Across Art, Media &amp; Advisory.</span>
       </h1>
 
-      <p class="text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
+      <p class="text-slate-100/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
         Built for film producers, production houses, OTT platforms, publishers, literary &amp; poetry event organizers, media outlets, academic institutions, and tax/legal enquiries.
       </p>
     </div>
   </section>
 
   <!-- Enquiry Form + Official Links & Zero-Leak Security -->
-  <section class="w-full bg-obsidian py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
+  <section class="w-full bg-gradient-to-b from-[#FAF6EE] via-[#F4ECE0] to-[#FAF6EE] py-12 sm:py-16 md:py-20 border-b border-amber-900/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-7 sm:gap-8 md:gap-10 items-start">
 
       <!-- Left: Purpose-Based Enquiry Form (Demo Mode Until Client Approval) -->
       <div class="md:col-span-7 min-w-0">
-        <div class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-8 space-y-6 shadow-xs">
-          <div class="space-y-1.5">
+        <div class="luxury-card rounded-2xl bg-white p-5 sm:p-8 space-y-6">
+          <div class="space-y-1.5 pb-3 border-b border-amber-900/12">
             <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Collaboration &amp; Enquiry Desk</span>
-              <span class="px-2.5 py-1 rounded-full bg-ivoryCard border border-gold/40 text-[11px] text-gold font-semibold">
+              <span class="inline-block px-3 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/35 text-[11px] uppercase tracking-[0.16em] font-bold">Collaboration &amp; Enquiry Desk</span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500/15 border border-gold/45 text-[11px] text-crimsonAccent font-bold">
                 Preview Mode — Live Endpoint Pending Approval
               </span>
             </div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">Send a Structured Enquiry</h2>
+            <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950 pt-1">Send a Structured <span class="italic text-gold">Enquiry</span></h2>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Select the enquiry category so your message reaches with clear context. Full scripts and confidential documents are shared privately after mutual review.
             </p>
@@ -454,37 +485,37 @@ div:has(> img[src*="assets/media/gallery/"]) {
           <form id="demo-contact-form" class="space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="min-w-0">
-                <label for="sender-name" class="block text-xs font-semibold text-slate-700 mb-1.5">Your Name *</label>
+                <label for="sender-name" class="block text-xs font-semibold text-slate-800 mb-1.5">Your Name *</label>
                 <input
                   id="sender-name"
                   name="name"
                   type="text"
                   required
                   placeholder="Enter your full name"
-                  class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition"
+                  class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900 placeholder-slate-400"
                 />
               </div>
 
               <div class="min-w-0">
-                <label for="sender-email" class="block text-xs font-semibold text-slate-700 mb-1.5">Email Address *</label>
+                <label for="sender-email" class="block text-xs font-semibold text-slate-800 mb-1.5">Email Address *</label>
                 <input
                   id="sender-email"
                   name="email"
                   type="email"
                   required
                   placeholder="name@organization.com"
-                  class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition"
+                  class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900 placeholder-slate-400"
                 />
               </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="min-w-0">
-                <label for="enquiry-purpose" class="block text-xs font-semibold text-slate-700 mb-1.5">Enquiry Purpose *</label>
+                <label for="enquiry-purpose" class="block text-xs font-semibold text-slate-800 mb-1.5">Enquiry Purpose *</label>
                 <select
                   id="enquiry-purpose"
                   name="purpose"
-                  class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900 transition"
+                  class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900"
                 >
                   <option value="film-ott-audio">Film, OTT, Theatre or Audio Production</option>
                   <option value="books-poetry-event">Books, Poetry Recital or Literary Event</option>
@@ -494,36 +525,36 @@ div:has(> img[src*="assets/media/gallery/"]) {
               </div>
 
               <div class="min-w-0">
-                <label id="org-label" for="org-input" class="block text-xs font-semibold text-slate-700 mb-1.5">Production House / OTT / Audio Platform</label>
+                <label id="org-label" for="org-input" class="block text-xs font-semibold text-slate-800 mb-1.5">Production House / OTT / Audio Platform</label>
                 <input
                   id="org-input"
                   name="organization"
                   type="text"
                   placeholder="e.g., Studio, OTT Platform, Audio Label"
-                  class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition"
+                  class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900 placeholder-slate-400"
                 />
               </div>
             </div>
 
             <div class="min-w-0">
-              <label for="enquiry-message" class="block text-xs font-semibold text-slate-700 mb-1.5">Message / Project or Advisory Summary *</label>
+              <label for="enquiry-message" class="block text-xs font-semibold text-slate-800 mb-1.5">Message / Project or Advisory Summary *</label>
               <textarea
                 id="enquiry-message"
                 name="message"
                 rows="4"
                 required
                 placeholder="Share brief context (avoid pasting full unpublished scripts or sensitive personal/tax records in initial notes)."
-                class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 transition"
+                class="field-control w-full rounded-xl bg-ivoryCard border border-stone-300 px-4 py-3 text-sm text-slate-900 placeholder-slate-400"
               ></textarea>
             </div>
 
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
-              <p class="text-[11px] text-slate-500">
+              <p class="text-[11px] text-slate-600">
                 Zero-Leak Note: No public database storage; live routing activates upon approval.
               </p>
               <button
                 type="submit"
-                class="px-6 py-3 rounded-xl bg-gold text-white text-xs sm:text-sm font-semibold hover:bg-crimsonAccent active:scale-[0.98] md:hover:-translate-y-0.5 transition duration-200 shrink-0 shadow-xs"
+                class="px-6 py-3 rounded-xl bg-[#121B2E] text-amber-300 border border-amber-400/40 text-xs sm:text-sm font-bold hover:bg-amber-500 hover:text-slate-950 active:scale-[0.98] md:hover:-translate-y-0.5 transition duration-200 shrink-0 shadow-xs"
               >
                 Preview Enquiry Submit
               </button>
@@ -536,78 +567,78 @@ div:has(> img[src*="assets/media/gallery/"]) {
 
       <!-- Right: Official Profiles, Books & Social Directory -->
       <div class="md:col-span-5 space-y-6 min-w-0">
-        <div class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-7 space-y-4 shadow-xs">
-          <div class="flex items-center gap-3.5 pb-3 border-b border-stone-200">
+        <div class="luxury-card rounded-2xl bg-white p-5 sm:p-7 space-y-4">
+          <div class="flex items-center gap-3.5 pb-3 border-b border-amber-900/12">
             <img
               src="assets/media/portrait/jasmin-bhatt-profile.jpeg"
               alt="Jasmin Bhatt"
-              class="w-14 h-14 rounded-full object-cover object-top border border-gold/50 shrink-0"
+              class="w-14 h-14 rounded-full object-cover object-top border-2 border-gold/60 shrink-0 shadow-xs"
             />
             <div class="min-w-0">
               <span class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold block">Official Profiles &amp; Backlinks</span>
-              <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950 truncate">Verified Links &amp; Platforms</h2>
+              <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950 truncate">Verified Links &amp; <span class="italic text-gold">Platforms</span></h2>
             </div>
           </div>
 
           <ul class="space-y-3 text-xs sm:text-sm">
-            <li class="link-row-card p-3.5 rounded-xl bg-ivoryCard border border-stone-200 flex items-center justify-between gap-3 min-w-0">
+            <li class="link-row-card p-3.5 rounded-xl flex items-center justify-between gap-3 min-w-0">
               <div class="min-w-0">
                 <div class="font-semibold text-slate-950">IMDb Professional Profile</div>
                 <div class="text-slate-500 text-xs truncate">https://www.imdb.com/name/nm15420877/</div>
               </div>
-              <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-gold text-white font-semibold text-xs shrink-0 hover:bg-crimsonAccent active:scale-95 transition">
+              <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#121B2E] text-amber-300 border border-amber-400/35 font-semibold text-xs shrink-0 hover:bg-amber-500 hover:text-slate-950 active:scale-95 transition">
                 Open ↗
               </a>
             </li>
 
-            <li class="link-row-card p-3.5 rounded-xl bg-ivoryCard border border-stone-200 flex items-center justify-between gap-3 min-w-0">
+            <li class="link-row-card p-3.5 rounded-xl flex items-center justify-between gap-3 min-w-0">
               <div class="min-w-0">
                 <div class="font-semibold text-slate-950">Poetry &amp; Live Performance</div>
                 <div class="text-slate-500 text-xs truncate">YouTube • Kahaniyaan (kahaniyaan98)</div>
               </div>
-              <a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-gold/50 text-gold font-semibold text-xs shrink-0 hover:bg-gold hover:text-white active:scale-95 transition">
+              <a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#121B2E] text-amber-300 border border-amber-400/35 font-semibold text-xs shrink-0 hover:bg-amber-500 hover:text-slate-950 active:scale-95 transition">
                 Watch ↗
               </a>
             </li>
 
-            <li class="link-row-card p-3.5 rounded-xl bg-ivoryCard border border-stone-200 flex items-center justify-between gap-3 min-w-0">
+            <li class="link-row-card p-3.5 rounded-xl flex items-center justify-between gap-3 min-w-0">
               <div class="min-w-0">
                 <div class="font-semibold text-slate-950">Ek Sambandh… Aavo Pan…</div>
                 <div class="text-slate-500 text-xs truncate">Gujarati Novel • Amazon India</div>
               </div>
-              <a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-gold/50 text-gold font-semibold text-xs shrink-0 hover:bg-gold hover:text-white active:scale-95 transition">
+              <a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#121B2E] text-amber-300 border border-amber-400/35 font-semibold text-xs shrink-0 hover:bg-amber-500 hover:text-slate-950 active:scale-95 transition">
                 Amazon ↗
               </a>
             </li>
 
-            <li class="link-row-card p-3.5 rounded-xl bg-ivoryCard border border-stone-200 flex items-center justify-between gap-3 min-w-0">
+            <li class="link-row-card p-3.5 rounded-xl flex items-center justify-between gap-3 min-w-0">
               <div class="min-w-0">
                 <div class="font-semibold text-slate-950">Love Vs We…</div>
                 <div class="text-slate-500 text-xs truncate">English Novel • Amazon India</div>
               </div>
-              <a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-gold/50 text-gold font-semibold text-xs shrink-0 hover:bg-gold hover:text-white active:scale-95 transition">
+              <a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#121B2E] text-amber-300 border border-amber-400/35 font-semibold text-xs shrink-0 hover:bg-amber-500 hover:text-slate-950 active:scale-95 transition">
                 Amazon ↗
               </a>
             </li>
           </ul>
 
           <!-- Social Channels Ready For Official Handle URLs -->
-          <div class="pt-3 border-t border-stone-200 space-y-2.5">
+          <div class="pt-3 border-t border-amber-900/12 space-y-2.5">
             <div class="text-xs uppercase tracking-[0.18em] text-crimsonAccent font-bold">Social &amp; Digital Presence</div>
             <p class="text-xs text-slate-600 leading-relaxed">
               Dedicated slots ready for official accounts:
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1.5 rounded-lg bg-ivoryCard border border-stone-200 hover:border-gold text-slate-900 font-medium transition">Instagram</span>
-              <span class="px-3 py-1.5 rounded-lg bg-ivoryCard border border-stone-200 hover:border-gold text-slate-900 font-medium transition">Facebook</span>
-              <span class="px-3 py-1.5 rounded-lg bg-ivoryCard border border-stone-200 hover:border-gold text-slate-900 font-medium transition">LinkedIn</span>
-              <a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-ivoryCard border border-gold/40 text-gold font-medium hover:bg-gold hover:text-white transition">
+              <span class="px-3 py-1.5 rounded-lg bg-[#121B2E] text-amber-200 border border-amber-400/30 font-medium transition">Instagram</span>
+              <span class="px-3 py-1.5 rounded-lg bg-[#121B2E] text-amber-200 border border-amber-400/30 font-medium transition">Facebook</span>
+              <span class="px-3 py-1.5 rounded-lg bg-[#121B2E] text-amber-200 border border-amber-400/30 font-medium transition">LinkedIn</span>
+              <a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-gold text-white font-semibold hover:bg-crimsonAccent transition">
                 YouTube / Kahaniyaan ↗
               </a>
-              <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-ivoryCard border border-gold/40 text-gold font-medium hover:bg-gold hover:text-white transition">
+              <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-gold text-white font-semibold hover:bg-crimsonAccent transition">
                 IMDb ↗
               </a>
-              <a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-ivoryCard border border-gold/40 text-gold font-medium hover:bg-gold hover:text-white transition">
+              <a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-gold text-white font-semibold hover:bg-crimsonAccent transition">
                 Amazon Books ↗
               </a>
             </div>
@@ -619,31 +650,31 @@ div:has(> img[src*="assets/media/gallery/"]) {
   </section>
 
   <!-- Security & Intellectual Property Charter -->
-  <section class="w-full bg-ivory text-slate-900 py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
+  <section class="w-full bg-gradient-to-b from-[#EFE6D5] via-[#E8DCB8]/55 to-[#EFE6D5] text-slate-900 py-12 sm:py-16 md:py-20 border-b border-amber-900/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8">
-      <div class="max-w-3xl">
-        <span class="text-xs uppercase tracking-[0.22em] text-crimsonAccent font-bold">Security &amp; Confidentiality</span>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1 leading-tight">
-          Zero-Leak &amp; Story IP Safeguards
+      <div class="max-w-3xl pb-3 border-b border-amber-900/15">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/40 text-[11px] uppercase tracking-[0.2em] font-bold shadow-xs">Security &amp; Confidentiality</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-2 leading-tight">
+          Zero-Leak &amp; <span class="italic text-gold">Story IP Safeguards</span>
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-        <article class="charter-card bg-ivoryCard rounded-2xl p-5 sm:p-6 border border-stone-200 border-t-4 border-t-gold shadow-xs min-w-0">
+        <article class="charter-card rounded-2xl p-5 sm:p-6 border-t-4 border-t-gold min-w-0">
           <h3 class="font-serif text-2xl font-semibold text-slate-950">Private Scripts &amp; Manuscripts</h3>
           <p class="text-sm text-slate-700 mt-2 leading-relaxed">
             Registered original stories, screenplays, and unpublished drafts are never hosted on public pages or downloadable web folders.
           </p>
         </article>
 
-        <article class="charter-card bg-ivoryCard rounded-2xl p-5 sm:p-6 border border-stone-200 border-t-4 border-t-crimsonAccent shadow-xs min-w-0">
+        <article class="charter-card rounded-2xl p-5 sm:p-6 border-t-4 border-t-crimsonAccent min-w-0">
           <h3 class="font-serif text-2xl font-semibold text-slate-950">Clean Enquiry Routing</h3>
           <p class="text-sm text-slate-700 mt-2 leading-relaxed">
             Enquiry submissions avoid public database exposure and route directly to the approved destination once confirmed.
           </p>
         </article>
 
-        <article class="charter-card bg-ivoryCard rounded-2xl p-5 sm:p-6 border border-stone-200 border-t-4 border-t-gold shadow-xs min-w-0">
+        <article class="charter-card rounded-2xl p-5 sm:p-6 border-t-4 border-t-gold min-w-0">
           <h3 class="font-serif text-2xl font-semibold text-slate-950">Controlled Asset Updates</h3>
           <p class="text-sm text-slate-700 mt-2 leading-relaxed">
             Official photographs, book covers, posters, certificates, and press items are organized cleanly for safe, hassle-free updates.
@@ -653,50 +684,50 @@ div:has(> img[src*="assets/media/gallery/"]) {
     </div>
   </section>
 
-  <!-- Enhanced Footer -->
-  <footer class="w-full bg-gradient-to-b from-charcoal to-charcoalLight/70 pt-12 sm:pt-14 pb-8 border-t-2 border-gold/60">
+  <!-- Signature Spotlight Footer -->
+  <footer class="w-full bg-gradient-to-br from-[#0F172A] via-[#17233B] to-[#231822] text-slate-100 pt-12 sm:pt-16 pb-8 border-t-2 border-amber-400/70 shadow-[0_-12px_36px_-14px_rgba(15,23,42,0.35)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7 sm:gap-8 text-sm min-w-0">
-        <div class="space-y-3 min-w-0">
-          <div class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">Jasmin Bhatt</div>
-          <p class="text-xs text-slate-700 leading-relaxed">
+        <div class="space-y-3 min-w-0 rounded-2xl bg-white/[0.06] border border-amber-300/25 p-4 sm:p-5 backdrop-blur-xs">
+          <div class="font-serif text-2xl sm:text-3xl font-semibold text-white">Jasmin Bhatt</div>
+          <p class="text-xs text-slate-300 leading-relaxed">
             Writer, Director, Actor, Poet, Author, Storyteller, Educator and Tax Consultant from Bhavnagar, Gujarat, India.
           </p>
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-stone-300 text-[11px] font-medium text-slate-800">
-            <span class="w-2 h-2 rounded-full bg-gold"></span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-300/40 text-[11px] font-semibold text-amber-200">
+            <span class="w-2 h-2 rounded-full bg-amber-300"></span>
             <span>Bhavnagar • Gujarat</span>
           </div>
         </div>
 
-        <div class="space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Pages</div>
-          <ul class="space-y-2 text-xs text-slate-700">
-            <li><a href="index.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Home</a></li>
-            <li><a href="about.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">About, Education &amp; Tax/Law</a></li>
-            <li><a href="works.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Cinema, OTT, Theatre &amp; Audio</a></li>
-            <li><a href="literature-stories.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Books, Poetry &amp; Stories</a></li>
-            <li><a href="media-gallery.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Awards, Press &amp; Gallery</a></li>
-            <li><a href="contact.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Contact &amp; Security</a></li>
+        <div class="space-y-3 min-w-0 rounded-2xl bg-white/[0.04] border border-amber-300/20 p-4 sm:p-5">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold pb-1.5 border-b border-amber-300/25">Pages</div>
+          <ul class="space-y-2 text-xs text-slate-200 font-medium">
+            <li><a href="index.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Home</a></li>
+            <li><a href="about.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">About, Education &amp; Tax/Law</a></li>
+            <li><a href="works.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Cinema, OTT, Theatre &amp; Audio</a></li>
+            <li><a href="literature-stories.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Books, Poetry &amp; Stories</a></li>
+            <li><a href="media-gallery.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Awards, Press &amp; Gallery</a></li>
+            <li><a href="contact.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Contact &amp; Security</a></li>
           </ul>
         </div>
 
-        <div class="space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Official Links</div>
-          <ul class="space-y-2 text-xs text-slate-700 break-words">
-            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">IMDb Profile (nm15420877) ↗</a></li>
-            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">YouTube Poetry Performance ↗</a></li>
-            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
-            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Love Vs We… (Amazon) ↗</a></li>
+        <div class="space-y-3 min-w-0 rounded-2xl bg-white/[0.04] border border-amber-300/20 p-4 sm:p-5">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold pb-1.5 border-b border-amber-300/25">Official Links</div>
+          <ul class="space-y-2 text-xs text-slate-200 font-medium break-words">
+            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">IMDb Profile (nm15420877) ↗</a></li>
+            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">YouTube Poetry Performance ↗</a></li>
+            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
+            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">Love Vs We… (Amazon) ↗</a></li>
           </ul>
         </div>
 
-        <div class="space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Location &amp; Languages</div>
-          <div class="rounded-xl bg-white/85 border border-stone-200 p-4 space-y-2 shadow-2xs">
-            <p class="text-xs text-slate-700 leading-relaxed">
+        <div class="space-y-3 min-w-0 rounded-2xl bg-amber-400/[0.08] border border-amber-300/35 p-4 sm:p-5">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold pb-1.5 border-b border-amber-300/25">Location &amp; Languages</div>
+          <div class="space-y-3">
+            <p class="text-xs text-slate-200 leading-relaxed font-medium">
               Bhavnagar, Gujarat, India • Gujarati, Hindi &amp; English.
             </p>
-            <a href="about.html" class="inline-flex items-center gap-1 text-xs font-bold text-gold hover:text-crimsonAccent transition">
+            <a href="about.html" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-500 text-slate-950 text-xs font-bold hover:bg-amber-400 transition shadow-xs">
               <span>View Practice &amp; Degrees</span>
               <span>→</span>
             </a>
@@ -706,8 +737,8 @@ div:has(> img[src*="assets/media/gallery/"]) {
 
       <div class="gold-hairline"></div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-xs text-slate-600 text-center sm:text-left">
-        <p class="font-medium text-slate-700">© Jasmin Bhatt. All rights reserved.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-xs text-slate-300 text-center sm:text-left font-medium">
+        <p class="text-amber-200 font-semibold">© Jasmin Bhatt. All rights reserved.</p>
         <p>Gujarati • Hindi • English • Bhavnagar, Gujarat</p>
       </div>
     </div>

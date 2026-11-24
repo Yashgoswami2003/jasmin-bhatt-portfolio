@@ -21,27 +21,137 @@ MARKER_END = "/* === AUTO-MOBILE-IMAGE-FIX-END === */"
 
 GLOBAL_FIX_CSS = f"""
 {MARKER_START}
-/* Classy, Elegant & Premium Editorial Background */
-body {{
-  background-color: #F6F2EA !important;
-  background-image:
-    radial-gradient(circle at 12% 8%, rgba(180, 138, 66, 0.08), transparent 42%),
-    radial-gradient(circle at 88% 14%, rgba(128, 34, 44, 0.05), transparent 38%),
-    linear-gradient(180deg, #F8F5EE 0%, #F3EEE3 55%, #EFE9DC 100%) !important;
-  background-attachment: fixed;
-}}
-
-section.bg-white,
-section.bg-cream,
-div.bg-white,
-div.bg-cream {{
-  background-color: rgba(255, 253, 249, 0.88);
-}}
-
-html, body {{
-  max-width: 100%;
+/* Attractive Light Editorial Page + Rich Spotlight Hero + Crisp Cards */
+html {{
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
+}}
+
+body {{
+  background-color: #F7F3EA !important;
+  background-image:
+    radial-gradient(ellipse 85% 45% at 15% 0%, rgba(180, 123, 30, 0.11), transparent 60%),
+    radial-gradient(ellipse 70% 40% at 88% 12%, rgba(140, 59, 43, 0.07), transparent 58%),
+    linear-gradient(180deg, #FAF7F0 0%, #F4EFE4 55%, #ECE4D3 100%) !important;
+  color: #1E293B !important;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  background-attachment: fixed;
+  overflow-x: clip;
+  max-width: 100%;
+}}
+
+header.sticky {{
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(180, 123, 30, 0.24) !important;
+  box-shadow: 0 6px 22px -12px rgba(15, 23, 42, 0.14) !important;
+  padding-top: 2px;
+}}
+
+/* Rich editorial spotlight on first section of EVERY page while keeping rest of page light */
+body > section:first-of-type,
+body > section:first-of-type[class*="bg-"] {{
+  position: relative;
+  background:
+    radial-gradient(ellipse 75% 65% at 88% 18%, rgba(224, 168, 62, 0.22), transparent 58%),
+    radial-gradient(ellipse 70% 60% at 12% 90%, rgba(140, 59, 43, 0.25), transparent 60%),
+    linear-gradient(135deg, #121B2E 0%, #1A2842 52%, #261B25 100%) !important;
+  color: #F8FAFC !important;
+  border-bottom: 2px solid rgba(224, 168, 62, 0.55) !important;
+  box-shadow: 0 24px 55px -20px rgba(15, 23, 42, 0.35) !important;
+}}
+
+body > section:first-of-type h1,
+body > section:first-of-type h2,
+body > section:first-of-type h3,
+body > section:first-of-type strong {{
+  color: #FFFFFF !important;
+}}
+
+body > section:first-of-type p,
+body > section:first-of-type li,
+body > section:first-of-type span {{
+  color: inherit;
+}}
+
+body > section:first-of-type .text-slate-950,
+body > section:first-of-type .text-slate-900,
+body > section:first-of-type .text-slate-800 {{
+  color: #FFFFFF !important;
+}}
+
+body > section:first-of-type .text-slate-700,
+body > section:first-of-type .text-slate-600 {{
+  color: rgba(241, 245, 249, 0.90) !important;
+}}
+
+body > section:first-of-type .text-slate-500 {{
+  color: rgba(226, 232, 240, 0.80) !important;
+}}
+
+/* Light cards/pills inside hero stay high-contrast so text is always sharp */
+body > section:first-of-type .bg-white,
+body > section:first-of-type .bg-ivoryCard,
+body > section:first-of-type a.group,
+body > section:first-of-type .quick-jump-card {{
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF8 100%) !important;
+  color: #0F172A !important;
+  border: 1px solid rgba(224, 168, 62, 0.45) !important;
+  box-shadow: 0 14px 28px -12px rgba(0, 0, 0, 0.30) !important;
+}}
+
+body > section:first-of-type .bg-white .text-slate-950,
+body > section:first-of-type .bg-white .text-slate-900,
+body > section:first-of-type .bg-white .text-slate-800,
+body > section:first-of-type .bg-white .font-semibold,
+body > section:first-of-type .bg-ivoryCard .text-slate-950,
+body > section:first-of-type .bg-ivoryCard .text-slate-900,
+body > section:first-of-type .bg-ivoryCard .text-slate-800,
+body > section:first-of-type .bg-ivoryCard .font-semibold,
+body > section:first-of-type a.group .font-semibold,
+body > section:first-of-type .quick-jump-card .font-semibold {{
+  color: #0F172A !important;
+}}
+
+body > section:first-of-type .bg-white .text-slate-700,
+body > section:first-of-type .bg-white .text-slate-600,
+body > section:first-of-type .bg-white .text-slate-500,
+body > section:first-of-type .bg-ivoryCard .text-slate-700,
+body > section:first-of-type .bg-ivoryCard .text-slate-600,
+body > section:first-of-type .bg-ivoryCard .text-slate-500,
+body > section:first-of-type a.group .text-slate-500,
+body > section:first-of-type .quick-jump-card .text-slate-500 {{
+  color: #475569 !important;
+}}
+
+body > section:not(:first-of-type).bg-white,
+body > section:not(:first-of-type).bg-ivory,
+body > section:not(:first-of-type).bg-cream {{
+  background-color: rgba(255, 254, 250, 0.82) !important;
+}}
+
+body > section:not(:first-of-type).bg-obsidian {{
+  background-color: transparent !important;
+}}
+
+body > section:not(:first-of-type).bg-charcoal {{
+  background-color: rgba(239, 232, 218, 0.85) !important;
+}}
+
+body > section:not(:first-of-type) article.luxury-card,
+body > section:not(:first-of-type) article.award-card,
+body > section:not(:first-of-type) figure.gallery-item,
+body > section:not(:first-of-type) .stat-pill {{
+  background-color: #FFFFFF !important;
+  border-color: rgba(180, 123, 30, 0.26) !important;
+  box-shadow: 0 14px 34px -14px rgba(15, 23, 42, 0.13), 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+}}
+
+footer {{
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(180, 123, 30, 0.14), transparent 70%),
+    linear-gradient(180deg, #EFE8D8 0%, #E3D8C3 100%) !important;
+  border-top: 2px solid rgba(180, 123, 30, 0.55) !important;
 }}
 
 *, *::before, *::after {{
@@ -122,14 +232,15 @@ div:has(> img[src*="assets/media/gallery/"]) {{
   }}
 
   h1 {{
-    font-size: clamp(1.9rem, 8vw, 2.55rem) !important;
-    line-height: 1.12 !important;
+    font-size: clamp(2rem, 8.2vw, 2.7rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.015em;
     word-break: break-word;
   }}
 
   h2 {{
-    font-size: clamp(1.55rem, 6.4vw, 2.1rem) !important;
-    line-height: 1.16 !important;
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem) !important;
+    line-height: 1.15 !important;
     word-break: break-word;
   }}
 

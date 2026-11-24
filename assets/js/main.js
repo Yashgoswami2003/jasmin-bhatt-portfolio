@@ -111,6 +111,7 @@ function initContactEnquiryForm() {
       Your <span class="font-semibold">${escapeHtml(purposeText)}</span> note is ready for live endpoint routing once approved. No public database storage or sensitive script exposure is active.
     `;
     statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    window.dispatchEvent(new Event('resize'));
   });
 }
 
@@ -139,7 +140,10 @@ function initScrollProgress() {
   let ticking = false;
 
   const updateProgress = () => {
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const docHeight = Math.max(
+      document.documentElement.scrollHeight,
+      document.body ? document.body.scrollHeight : 0
+    ) - window.innerHeight;
     const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
     bar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
     ticking = false;
@@ -181,12 +185,14 @@ function initGalleryFilters() {
           item.classList.add('hidden');
         }
       });
+
+      window.dispatchEvent(new Event('resize'));
     });
   });
 }
 
 function escapeHtml(str) {
-  return str
+  return String(str)
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')

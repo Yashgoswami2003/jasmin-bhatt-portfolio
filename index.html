@@ -7,7 +7,7 @@
   <meta name="description" content="Official profile of Jasmin Bhatt from Bhavnagar, Gujarat — Writer, Director, Actor, Poet, Author, Storyteller, Educator and Tax Consultant across Gujarati, Hindi &amp; English." />
   <meta name="keywords" content="Jasmin Bhatt, Ek Sambandh Aavo Pan, Love Vs We, Library Ek Anokhi Varta, Super Maanav, Man Melo, Kahaniyaan, Bhavnagar, Tax Consultant, Author, Director, Poet" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#FAF7F2" />
+  <meta name="theme-color" content="#121B2E" />
   <link rel="canonical" href="https://www.imdb.com/name/nm15420877/" />
 
   <!-- Open Graph / Social Sharing -->
@@ -70,13 +70,13 @@
       theme: {
         extend: {
           colors: {
-            obsidian: '#FAF7F2',
-            charcoal: '#F1ECE2',
-            charcoalLight: '#E6DFD1',
-            ivory: '#FFFFFF',
-            ivoryCard: '#FFFDF9',
+            obsidian: '#F7F3EA',
+            charcoal: '#EFE8DA',
+            charcoalLight: '#E3D8C3',
+            ivory: '#FFFDF9',
+            ivoryCard: '#FFFFFF',
             gold: '#B47B1E',
-            goldLight: '#D49A34',
+            goldLight: '#E0A83E',
             crimsonAccent: '#8C3B2B'
           },
           fontFamily: {
@@ -91,22 +91,23 @@
   <style>
     html,
     body {
-      overflow-x: hidden;
-      background-color: #F6F2EA;
+      overflow-x: clip;
+      background-color: #F7F3EA;
       background-image:
-        radial-gradient(circle at 12% 8%, rgba(180, 123, 30, 0.08), transparent 42%),
-        radial-gradient(circle at 88% 14%, rgba(140, 59, 43, 0.05), transparent 38%),
-        linear-gradient(180deg, #F8F5EE 0%, #F3EEE3 55%, #EFE9DC 100%);
+        radial-gradient(ellipse 85% 45% at 15% 0%, rgba(180, 123, 30, 0.14), transparent 62%),
+        radial-gradient(ellipse 70% 42% at 88% 12%, rgba(140, 59, 43, 0.08), transparent 60%),
+        radial-gradient(ellipse 75% 45% at 50% 62%, rgba(224, 168, 62, 0.10), transparent 65%),
+        linear-gradient(180deg, #FAF7F0 0%, #F3EDE0 55%, #E9DFC9 100%);
       color: #1E293B;
       font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      -webkit-tap-highlight-color: rgba(180, 123, 30, 0.16);
+      -webkit-tap-highlight-color: rgba(180, 123, 30, 0.18);
     }
     a,
     button {
       touch-action: manipulation;
     }
 
-    /* Slow-Network / Tailwind CDN Fallback Layer (Light Theme) */
+    /* Slow-Network / Tailwind CDN Fallback Layer */
     .max-w-7xl {
       max-width: 80rem;
       margin-left: auto;
@@ -161,10 +162,10 @@
       color: #FFFFFF;
     }
     .bg-charcoal {
-      background-color: #F1ECE2;
+      background-color: #EFE8DA;
     }
     .bg-ivoryCard {
-      background-color: #FFFDF9;
+      background-color: #FFFFFF;
     }
     .rounded-2xl {
       border-radius: 1rem;
@@ -173,30 +174,68 @@
       border-radius: 0.75rem;
     }
     .shadow-xs {
-      box-shadow: 0 1px 3px rgba(24, 24, 27, 0.06);
+      box-shadow: 0 2px 6px rgba(24, 24, 27, 0.07);
     }
     .shadow-md {
-      box-shadow: 0 10px 24px -8px rgba(24, 24, 27, 0.12);
+      box-shadow: 0 16px 34px -10px rgba(24, 24, 27, 0.18);
     }
 
     .gold-hairline {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(180, 123, 30, 0.55), transparent);
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(246, 199, 107, 0.9), rgba(224, 168, 62, 1), rgba(246, 199, 107, 0.9), transparent);
     }
+
     .luxury-card {
       position: relative;
-      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.32s ease, box-shadow 0.32s ease, background-color 0.32s ease;
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF8 100%);
+      border: 1px solid rgba(180, 123, 30, 0.28);
+      border-top: 4px solid #B47B1E;
+      box-shadow: 0 16px 34px -12px rgba(15, 23, 42, 0.14), 0 4px 10px rgba(180, 123, 30, 0.10);
+      transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.34s ease, box-shadow 0.34s ease;
+    }
+    .luxury-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at top right, rgba(224, 168, 62, 0.13), transparent 50%);
+      pointer-events: none;
+    }
+    .luxury-card > * {
+      position: relative;
+      z-index: 1;
     }
     .luxury-card:active {
       transform: scale(0.99);
-      border-color: #B47B1E;
+      border-color: #8C3B2B;
     }
+
+    /* Midnight Spotlight Card (Matches Hero Vibe for High-Impact Panels) */
+    .spotlight-card {
+      position: relative;
+      background:
+        radial-gradient(ellipse 85% 65% at 88% 12%, rgba(224, 168, 62, 0.22), transparent 60%),
+        linear-gradient(145deg, #121B2E 0%, #1A2842 58%, #241A24 100%);
+      color: #F8FAFC;
+      border: 1px solid rgba(224, 168, 62, 0.48);
+      border-top: 4px solid #E0A83E;
+      box-shadow: 0 22px 46px -14px rgba(15, 23, 42, 0.34);
+      transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.34s ease, box-shadow 0.34s ease;
+    }
+    .spotlight-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
     .portrait-frame {
+      background: linear-gradient(145deg, rgba(246, 199, 107, 0.65), rgba(255, 255, 255, 0.22), rgba(224, 168, 62, 0.45));
+      box-shadow: 0 24px 52px -12px rgba(0, 0, 0, 0.48), 0 0 28px -6px rgba(224, 168, 62, 0.25);
       transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
     }
     .portrait-frame img {
       transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
     }
+
     .nav-link-hover {
       position: relative;
       transition: color 0.25s ease;
@@ -208,21 +247,31 @@
       bottom: -4px;
       width: 0;
       height: 2px;
-      background-color: #B47B1E;
+      background: linear-gradient(90deg, #B47B1E, #E0A83E);
       transition: width 0.25s ease;
     }
+
     .stat-pill {
-      transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF7 100%) !important;
+      border: 1px solid rgba(180, 123, 30, 0.28) !important;
+      box-shadow: 0 12px 26px -10px rgba(15, 23, 42, 0.12), 0 3px 8px rgba(180, 123, 30, 0.09);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
+
     @media (hover: hover) and (pointer: fine) {
       .luxury-card:hover {
-        transform: translateY(-6px);
+        transform: translateY(-7px);
         border-color: #B47B1E;
-        box-shadow: 0 22px 42px -14px rgba(180, 123, 30, 0.22), 0 8px 18px -10px rgba(24, 24, 27, 0.12);
+        box-shadow: 0 28px 50px -14px rgba(180, 123, 30, 0.30), 0 12px 24px -10px rgba(15, 23, 42, 0.16);
+      }
+      .spotlight-card:hover {
+        transform: translateY(-6px);
+        border-color: #F6C76B;
+        box-shadow: 0 28px 56px -12px rgba(15, 23, 42, 0.42), 0 0 26px -8px rgba(224, 168, 62, 0.25);
       }
       .portrait-frame:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 24px 48px -16px rgba(180, 123, 30, 0.25);
+        transform: translateY(-5px);
+        box-shadow: 0 32px 62px -12px rgba(0, 0, 0, 0.55), 0 0 34px -4px rgba(246, 199, 107, 0.38);
       }
       .portrait-frame:hover img {
         transform: scale(1.03);
@@ -231,33 +280,16 @@
         width: 100%;
       }
       .stat-pill:hover {
-        transform: translateY(-3px);
-        border-color: #B47B1E;
-        background-color: #FFFFFF;
+        transform: translateY(-4px);
+        border-color: #B47B1E !important;
+        box-shadow: 0 18px 32px -10px rgba(180, 123, 30, 0.26);
       }
     }
 
 /* === AUTO-MOBILE-IMAGE-FIX-START === */
-/* Classy, Elegant & Premium Editorial Background */
-body {
-  background-color: #F6F2EA !important;
-  background-image:
-    radial-gradient(circle at 12% 8%, rgba(180, 138, 66, 0.08), transparent 42%),
-    radial-gradient(circle at 88% 14%, rgba(128, 34, 44, 0.05), transparent 38%),
-    linear-gradient(180deg, #F8F5EE 0%, #F3EEE3 55%, #EFE9DC 100%) !important;
-  background-attachment: fixed;
-}
-
-section.bg-white,
-section.bg-cream,
-div.bg-white,
-div.bg-cream {
-  background-color: rgba(255, 253, 249, 0.88);
-}
-
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -269,6 +301,66 @@ html, body {
 img, picture, svg, video, iframe {
   display: block;
   max-width: 100%;
+}
+
+/* Signature Spotlight Theme (Hero, Cards & Footer) */
+.hero-spotlight {
+  position: relative;
+  background:
+    radial-gradient(ellipse 75% 65% at 88% 18%, rgba(224, 168, 62, 0.26), transparent 58%),
+    radial-gradient(ellipse 70% 60% at 12% 90%, rgba(140, 59, 43, 0.30), transparent 60%),
+    linear-gradient(135deg, #121B2E 0%, #1B2944 52%, #271C26 100%) !important;
+  color: #F8FAFC !important;
+  border-bottom: 2px solid rgba(224, 168, 62, 0.65) !important;
+  box-shadow: 0 24px 55px -20px rgba(15, 23, 42, 0.38) !important;
+}
+
+.hero-spotlight h1,
+.hero-spotlight h2,
+.hero-spotlight strong {
+  color: #FFFFFF !important;
+}
+
+.hero-spotlight h1 span.italic {
+  color: #F6C76B !important;
+  text-shadow: 0 2px 18px rgba(246, 199, 107, 0.28);
+}
+
+.hero-spotlight .hero-kicker {
+  color: #F3C669 !important;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.35);
+}
+
+.hero-spotlight .hero-subrole {
+  color: #F7BFB2 !important;
+}
+
+.hero-spotlight .hero-lead {
+  color: rgba(241, 245, 249, 0.92) !important;
+}
+
+.hero-spotlight .hero-label {
+  color: rgba(226, 232, 240, 0.85) !important;
+}
+
+.hero-spotlight .quick-jump-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF7 100%) !important;
+  border: 1px solid rgba(224, 168, 62, 0.55) !important;
+  border-bottom: 3px solid rgba(180, 123, 30, 0.72) !important;
+  box-shadow: 0 14px 28px -12px rgba(0, 0, 0, 0.36) !important;
+}
+
+.hero-spotlight .quick-jump-card:hover {
+  border-color: #F6C76B !important;
+  box-shadow: 0 18px 34px -10px rgba(224, 168, 62, 0.42) !important;
+}
+
+.hero-spotlight .quick-jump-card .font-semibold {
+  color: #0F172A !important;
+}
+
+.hero-spotlight .quick-jump-card .text-slate-500 {
+  color: #475569 !important;
 }
 
 /* Portrait: clean top-focused framing across mobile & desktop */
@@ -339,14 +431,15 @@ div:has(> img[src*="assets/media/gallery/"]) {
   }
 
   h1 {
-    font-size: clamp(1.9rem, 8vw, 2.55rem) !important;
-    line-height: 1.12 !important;
+    font-size: clamp(2rem, 8.2vw, 2.7rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.015em;
     word-break: break-word;
   }
 
   h2 {
-    font-size: clamp(1.55rem, 6.4vw, 2.1rem) !important;
-    line-height: 1.16 !important;
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem) !important;
+    line-height: 1.15 !important;
     word-break: break-word;
   }
 
@@ -355,7 +448,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
   }
 
   a, button {
-    min-height: 40px;
+    min-height: 42px;
   }
 
   img[src*="assets/media/books/"] {
@@ -373,10 +466,10 @@ div:has(> img[src*="assets/media/gallery/"]) {
 /* === AUTO-MOBILE-IMAGE-FIX-END === */
   </style>
 </head>
-<body class="bg-obsidian text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-white">
+<body class="bg-obsidian text-slate-800 font-sans antialiased overflow-x-clip selection:bg-gold selection:text-white">
 
   <!-- Top Scroll Progress Bar -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-goldLight via-gold to-crimsonAccent z-[60] transition-[width] duration-150"></div>
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[2.5px] w-0 bg-gradient-to-r from-goldLight via-amber-300 to-crimsonAccent z-[60] transition-[width] duration-150"></div>
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs">
@@ -428,58 +521,58 @@ div:has(> img[src*="assets/media/gallery/"]) {
   </header>
 
   <!-- Hero Section -->
-  <section class="relative w-full py-10 sm:py-16 md:py-20 border-b border-stone-200/90 bg-gradient-to-b from-white via-obsidian to-charcoal/55">
+  <section class="hero-spotlight relative w-full py-10 sm:py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-7 sm:gap-8 md:gap-10 items-center">
       <!-- Left Editorial Copy -->
       <div class="md:col-span-7 space-y-4 sm:space-y-5 min-w-0">
-        <div class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white border border-gold/40 text-gold text-[10px] sm:text-xs font-semibold tracking-wide shadow-2xs">
+        <div class="hero-kicker inline-flex flex-wrap items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/10 border border-amber-300/45 text-amber-200 text-[10px] sm:text-xs font-semibold tracking-wide shadow-sm backdrop-blur-xs">
           <span>Gujarati • Hindi • English</span>
-          <span class="text-stone-300">|</span>
+          <span class="text-amber-200/40">|</span>
           <span>Literature • Cinema • Theatre • Taxation</span>
         </div>
 
-        <h1 class="font-serif text-[34px] sm:text-5xl md:text-[54px] lg:text-[62px] font-semibold leading-[1.08] sm:leading-[1.05] tracking-tight text-slate-950 break-words">
-          A Complete Creative &amp; Legal Journey — <span class="text-gold italic">From Page &amp; Screen to Advisory.</span>
+        <h1 class="font-serif text-[34px] sm:text-5xl md:text-[56px] lg:text-[64px] font-semibold leading-[1.08] sm:leading-[1.05] tracking-tight text-white break-words">
+          A Complete Creative &amp; Legal Journey — <span class="text-amber-300 italic">From Page &amp; Screen to Advisory.</span>
         </h1>
 
-        <p class="text-[11px] sm:text-[13px] font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase text-crimsonAccent leading-relaxed">
+        <p class="hero-subrole text-[11px] sm:text-[13px] font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase text-rose-200 leading-relaxed">
           Writer • Director • Actor • Poet • Author • Storyteller • Educator • Tax Consultant
         </p>
 
-        <p class="text-slate-700 text-sm sm:text-base md:text-[17px] leading-relaxed max-w-2xl">
-          <strong class="text-slate-950 font-semibold">Jasmin Bhatt</strong> from Bhavnagar, Gujarat weaves emotional depth, suspense, human relationships, and social realities across novels, feature films, web series, theatre, poetry, and audio dramas—alongside approximately 20 years in taxation, law, and academic teaching.
+        <p class="hero-lead text-slate-100/90 text-sm sm:text-base md:text-[17px] leading-relaxed max-w-2xl">
+          <strong class="text-white font-semibold">Jasmin Bhatt</strong> from Bhavnagar, Gujarat weaves emotional depth, suspense, human relationships, and social realities across novels, feature films, web series, theatre, poetry, and audio dramas—alongside approximately 20 years in taxation, law, and academic teaching.
         </p>
 
         <!-- Primary CTAs -->
         <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3 pt-1">
-          <a href="literature-stories.html" class="text-center px-5 py-3 rounded-xl bg-gold text-white text-xs sm:text-sm font-semibold hover:bg-crimsonAccent active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-xs">
+          <a href="literature-stories.html" class="text-center px-5 py-3 rounded-xl bg-amber-500 text-slate-950 text-xs sm:text-sm font-bold hover:bg-amber-400 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-md">
             Books, Poetry &amp; Stories
           </a>
-          <a href="works.html" class="text-center px-5 py-3 rounded-xl bg-white border border-stone-300 text-slate-900 text-xs sm:text-sm font-semibold hover:border-gold hover:text-gold active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
+          <a href="works.html" class="text-center px-5 py-3 rounded-xl bg-white text-slate-900 text-xs sm:text-sm font-semibold hover:bg-amber-50 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-sm">
             Films, OTT &amp; Theatre
           </a>
-          <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="text-center px-4 py-3 rounded-xl bg-ivoryCard border border-gold/45 text-gold text-xs sm:text-sm font-semibold hover:bg-charcoal hover:border-gold active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
+          <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="text-center px-4 py-3 rounded-xl bg-white/10 border border-amber-300/50 text-amber-200 text-xs sm:text-sm font-semibold hover:bg-white/20 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
             IMDb Profile ↗
           </a>
         </div>
 
         <!-- Role-Based Quick Jump Grid -->
         <div class="pt-2 sm:pt-3">
-          <p class="text-[11px] uppercase tracking-[0.2em] text-slate-500 font-semibold mb-2.5">Quick Jump By Visitor</p>
+          <p class="hero-label text-[11px] uppercase tracking-[0.2em] text-slate-300 font-semibold mb-2.5">Quick Jump By Visitor</p>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
-            <a href="works.html" class="group p-3.5 rounded-xl bg-white border border-stone-200 hover:border-gold md:hover:-translate-y-1 active:border-gold shadow-2xs hover:shadow-md transition duration-200 min-w-0">
+            <a href="works.html" class="quick-jump-card group p-3.5 rounded-xl bg-white border border-stone-200 hover:border-gold md:hover:-translate-y-1 active:border-gold shadow-xs hover:shadow-md transition duration-200 min-w-0">
               <div class="font-semibold text-slate-950 group-hover:text-gold transition truncate">Producers &amp; OTT</div>
               <div class="text-slate-500 text-[11px] mt-0.5 truncate">Films, Series &amp; Audio</div>
             </a>
-            <a href="literature-stories.html" class="group p-3.5 rounded-xl bg-white border border-stone-200 hover:border-gold md:hover:-translate-y-1 active:border-gold shadow-2xs hover:shadow-md transition duration-200 min-w-0">
+            <a href="literature-stories.html" class="quick-jump-card group p-3.5 rounded-xl bg-white border border-stone-200 hover:border-gold md:hover:-translate-y-1 active:border-gold shadow-xs hover:shadow-md transition duration-200 min-w-0">
               <div class="font-semibold text-slate-950 group-hover:text-gold transition truncate">Readers &amp; Events</div>
               <div class="text-slate-500 text-[11px] mt-0.5 truncate">Books, Verse &amp; Pitches</div>
             </a>
-            <a href="media-gallery.html" class="group p-3.5 rounded-xl bg-white border border-stone-200 hover:border-gold md:hover:-translate-y-1 active:border-gold shadow-2xs hover:shadow-md transition duration-200 min-w-0">
+            <a href="media-gallery.html" class="quick-jump-card group p-3.5 rounded-xl bg-white border border-stone-200 hover:border-gold md:hover:-translate-y-1 active:border-gold shadow-xs hover:shadow-md transition duration-200 min-w-0">
               <div class="font-semibold text-slate-950 group-hover:text-gold transition truncate">Awards &amp; Press</div>
               <div class="text-slate-500 text-[11px] mt-0.5 truncate">Recognition &amp; Gallery</div>
             </a>
-            <a href="about.html" class="group p-3.5 rounded-xl bg-white border border-stone-200 hover:border-gold md:hover:-translate-y-1 active:border-gold shadow-2xs hover:shadow-md transition duration-200 min-w-0">
+            <a href="about.html" class="quick-jump-card group p-3.5 rounded-xl bg-white border border-stone-200 hover:border-gold md:hover:-translate-y-1 active:border-gold shadow-xs hover:shadow-md transition duration-200 min-w-0">
               <div class="font-semibold text-slate-950 group-hover:text-gold transition truncate">Tax, Law &amp; Faculty</div>
               <div class="text-slate-500 text-[11px] mt-0.5 truncate">LL.M., Advisory &amp; Teaching</div>
             </a>
@@ -489,8 +582,8 @@ div:has(> img[src*="assets/media/gallery/"]) {
 
       <!-- Right Portrait Slot (Official Portrait Integrated) -->
       <div class="md:col-span-5 min-w-0">
-        <div class="portrait-frame rounded-2xl bg-white border border-stone-200/90 p-2.5 sm:p-3 shadow-md">
-          <div class="relative aspect-[4/5] w-full rounded-xl overflow-hidden bg-charcoal border border-stone-200">
+        <div class="portrait-frame rounded-2xl border border-amber-300/60 p-2.5 sm:p-3 shadow-md">
+          <div class="relative aspect-[4/5] w-full rounded-xl overflow-hidden bg-slate-900 border border-amber-300/40">
             <img
               src="assets/media/portrait/New profile pic.jpg"
               alt="Jasmin Bhatt — Writer, Director, Actor, Poet, Author & Tax Consultant from Bhavnagar, Gujarat"
@@ -501,7 +594,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
                 <p class="font-serif text-lg sm:text-2xl text-white font-semibold leading-tight truncate">Jasmin Bhatt</p>
                 <p class="text-[11px] text-amber-200 truncate">Bhavnagar, Gujarat • India</p>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-white/95 border border-gold/50 text-[10px] uppercase tracking-wider text-slate-900 font-bold shrink-0 shadow-xs">
+              <span class="px-2.5 py-1 rounded-full bg-amber-400 text-slate-950 text-[10px] uppercase tracking-wider font-bold shrink-0 shadow-xs">
                 Official Portrait
               </span>
             </div>
@@ -512,47 +605,47 @@ div:has(> img[src*="assets/media/gallery/"]) {
   </section>
 
   <!-- Credentials & Highlights Strip -->
-  <section class="w-full bg-charcoal border-b border-stone-200/90 py-5 sm:py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
-      <div class="stat-pill rounded-xl bg-white/75 border border-stone-200/80 border-l-4 border-l-gold p-3.5 sm:p-4 min-w-0">
-        <div class="font-serif text-xl sm:text-3xl font-bold text-slate-950">~20 Years</div>
-        <div class="text-[11px] sm:text-xs text-slate-600 mt-0.5 font-medium leading-snug">Taxation &amp; Legal Consultancy</div>
+  <section class="w-full bg-gradient-to-r from-[#E9DFC9] via-[#F4ECE0] to-[#E9DFC9] border-b border-amber-900/15 py-6 sm:py-7">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-6">
+      <div class="stat-pill rounded-xl border-l-4 border-l-gold p-4 sm:p-5 min-w-0">
+        <div class="font-serif text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">~20 Years</div>
+        <div class="text-[11px] sm:text-xs text-slate-600 mt-1 font-semibold leading-snug">Taxation &amp; Legal Consultancy</div>
       </div>
-      <div class="stat-pill rounded-xl bg-white/75 border border-stone-200/80 border-l-4 border-l-gold p-3.5 sm:p-4 min-w-0">
-        <div class="font-serif text-xl sm:text-3xl font-bold text-slate-950">LL.M.</div>
-        <div class="text-[11px] sm:text-xs text-slate-600 mt-0.5 font-medium leading-snug">B.Com. • LL.B. • LL.M. (Sardar Patel Univ.)</div>
+      <div class="stat-pill rounded-xl border-l-4 border-l-gold p-4 sm:p-5 min-w-0">
+        <div class="font-serif text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">LL.M.</div>
+        <div class="text-[11px] sm:text-xs text-slate-600 mt-1 font-semibold leading-snug">B.Com. • LL.B. • LL.M. (Sardar Patel Univ.)</div>
       </div>
-      <div class="stat-pill rounded-xl bg-white/75 border border-stone-200/80 border-l-4 border-l-crimsonAccent p-3.5 sm:p-4 min-w-0">
-        <div class="font-serif text-xl sm:text-3xl font-bold text-slate-950">2 Novels</div>
-        <div class="text-[11px] sm:text-xs text-slate-600 mt-0.5 font-medium leading-snug">Gujarati Bestseller &amp; English Fiction</div>
+      <div class="stat-pill rounded-xl border-l-4 border-l-crimsonAccent p-4 sm:p-5 min-w-0">
+        <div class="font-serif text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">2 Novels</div>
+        <div class="text-[11px] sm:text-xs text-slate-600 mt-1 font-semibold leading-snug">Gujarati Bestseller &amp; English Fiction</div>
       </div>
-      <div class="stat-pill rounded-xl bg-white/75 border border-stone-200/80 border-l-4 border-l-crimsonAccent p-3.5 sm:p-4 min-w-0">
-        <div class="font-serif text-xl sm:text-3xl font-bold text-slate-950">Screen &amp; Stage</div>
-        <div class="text-[11px] sm:text-xs text-slate-600 mt-0.5 font-medium leading-snug">Films, OTT, Theatre &amp; Audio Since 2012</div>
+      <div class="stat-pill rounded-xl border-l-4 border-l-crimsonAccent p-4 sm:p-5 min-w-0">
+        <div class="font-serif text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">Screen &amp; Stage</div>
+        <div class="text-[11px] sm:text-xs text-slate-600 mt-1 font-semibold leading-snug">Films, OTT, Theatre &amp; Audio Since 2012</div>
       </div>
     </div>
   </section>
 
-  <!-- Crisp Light Editorial Showcase: Books, Cinema/Stage & Tax/Law -->
-  <section class="w-full bg-white text-slate-900 py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
+  <!-- Core Pillars Showcase -->
+  <section class="w-full bg-gradient-to-b from-[#FAF6EE] via-[#F4ECE0] to-[#FAF6EE] text-slate-900 py-12 sm:py-16 md:py-20 border-b border-amber-900/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-3 border-b border-amber-900/15">
         <div class="max-w-2xl">
-          <span class="text-xs uppercase tracking-[0.22em] text-crimsonAccent font-bold">Core Pillars</span>
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1 leading-tight">
-            Where Creative Depth Meets Structured Authority
+          <span class="inline-block px-3.5 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/40 text-[11px] uppercase tracking-[0.2em] font-bold shadow-xs">Core Pillars</span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-2 leading-tight">
+            Where Creative Depth Meets <span class="italic text-gold">Structured Authority</span>
           </h2>
         </div>
-        <a href="about.html" class="text-sm font-semibold text-slate-900 underline decoration-gold decoration-2 underline-offset-4 hover:text-crimsonAccent transition self-start md:self-auto">
+        <a href="about.html" class="text-sm font-bold text-amber-200 px-4 py-2.5 rounded-full bg-[#121B2E] border border-amber-400/45 hover:bg-amber-500 hover:text-slate-950 transition self-start md:self-auto whitespace-nowrap shadow-xs">
           Full Biography &amp; Credentials →
         </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
         <!-- Card 1: Published Books -->
-        <article class="luxury-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border border-stone-200 shadow-xs flex flex-col justify-between min-w-0">
+        <article class="luxury-card bg-ivoryCard rounded-2xl p-5 sm:p-7 flex flex-col justify-between min-w-0">
           <div class="space-y-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full bg-crimsonAccent/10 text-[11px] uppercase tracking-[0.14em] text-crimsonAccent font-bold">
+            <span class="inline-block px-3 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/35 text-[11px] uppercase tracking-[0.14em] font-bold">
               Books &amp; Literature
             </span>
             <h3 class="font-serif text-2xl sm:text-[27px] font-semibold text-slate-950 leading-snug">
@@ -562,17 +655,17 @@ div:has(> img[src*="assets/media/gallery/"]) {
               Published works in Gujarati (Navbharat Sahitya Prakashan, bestseller 2020–2021) and English (White Falcon Publishing — <em>“When Love Becomes a Choice, Not Just a Feeling.”</em>).
             </p>
           </div>
-          <div class="pt-4 sm:pt-5 mt-5 border-t border-stone-200 flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold">
-            <a href="literature-stories.html" class="py-1 text-slate-900 hover:text-gold transition">Explore Books →</a>
+          <div class="pt-4 sm:pt-5 mt-5 border-t border-amber-900/12 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-semibold">
+            <a href="literature-stories.html" class="py-1.5 px-3 rounded-lg bg-[#121B2E] text-amber-300 hover:bg-gold hover:text-white transition">Explore Books →</a>
             <a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="py-1 text-crimsonAccent hover:text-gold transition">Gujarati Book ↗</a>
             <a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="py-1 text-crimsonAccent hover:text-gold transition">English Book ↗</a>
           </div>
         </article>
 
         <!-- Card 2: Cinema, OTT & Stage -->
-        <article class="luxury-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border border-stone-200 shadow-xs flex flex-col justify-between min-w-0">
+        <article class="luxury-card bg-ivoryCard rounded-2xl p-5 sm:p-7 flex flex-col justify-between min-w-0">
           <div class="space-y-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full bg-gold/15 text-[11px] uppercase tracking-[0.14em] text-gold font-bold">
+            <span class="inline-block px-3 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/35 text-[11px] uppercase tracking-[0.14em] font-bold">
               Filmmaking, OTT &amp; Theatre
             </span>
             <h3 class="font-serif text-2xl sm:text-[27px] font-semibold text-slate-950 leading-snug">
@@ -582,16 +675,16 @@ div:has(> img[src*="assets/media/gallery/"]) {
               Direction, writing, acting, and theatre across Mumbai, Ahmedabad, and OTT platforms (MX Player, Hungama, Airtel Xstream), plus audio dramas <em>Meera</em> and <em>Khamosh Gawah</em>.
             </p>
           </div>
-          <div class="pt-4 sm:pt-5 mt-5 border-t border-stone-200 flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold">
-            <a href="works.html" class="py-1 text-slate-900 hover:text-gold transition">View Filmography →</a>
+          <div class="pt-4 sm:pt-5 mt-5 border-t border-amber-900/12 flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold">
+            <a href="works.html" class="py-1.5 px-3 rounded-lg bg-[#121B2E] text-amber-300 hover:bg-gold hover:text-white transition">View Filmography →</a>
             <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-1 text-crimsonAccent hover:text-gold transition">IMDb Profile ↗</a>
           </div>
         </article>
 
         <!-- Card 3: Tax, Law & Academics -->
-        <article class="luxury-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border border-stone-200 shadow-xs flex flex-col justify-between min-w-0">
+        <article class="luxury-card bg-ivoryCard rounded-2xl p-5 sm:p-7 flex flex-col justify-between min-w-0">
           <div class="space-y-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full bg-stone-200/80 text-[11px] uppercase tracking-[0.14em] text-slate-800 font-bold">
+            <span class="inline-block px-3 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/35 text-[11px] uppercase tracking-[0.14em] font-bold">
               Taxation, Law &amp; Academia
             </span>
             <h3 class="font-serif text-2xl sm:text-[27px] font-semibold text-slate-950 leading-snug">
@@ -601,8 +694,8 @@ div:has(> img[src*="assets/media/gallery/"]) {
               ~20 years in taxation and legal advisory (associated with Jagrut J. Desai, Advocate) and visiting faculty at Nandkunvarba Mahila College (since 2011) and Bhavnagar University (2013–2015).
             </p>
           </div>
-          <div class="pt-4 sm:pt-5 mt-5 border-t border-stone-200 flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold">
-            <a href="about.html" class="py-1 text-slate-900 hover:text-gold transition">View Practice &amp; Degrees →</a>
+          <div class="pt-4 sm:pt-5 mt-5 border-t border-amber-900/12 flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold">
+            <a href="about.html" class="py-1.5 px-3 rounded-lg bg-[#121B2E] text-amber-300 hover:bg-gold hover:text-white transition">View Practice &amp; Degrees →</a>
           </div>
         </article>
       </div>
@@ -610,19 +703,19 @@ div:has(> img[src*="assets/media/gallery/"]) {
   </section>
 
   <!-- Featured Poetry & Live Performance + Zero-Leak Security -->
-  <section class="w-full bg-obsidian py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
+  <section class="w-full bg-gradient-to-b from-[#EFE6D5] via-[#E8DCB8]/55 to-[#EFE6D5] py-12 sm:py-16 md:py-20 border-b border-amber-900/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-7 sm:gap-8 md:gap-10 items-start">
       <!-- Featured Poetry Video -->
       <div class="md:col-span-7 space-y-4 min-w-0">
         <div>
-          <span class="text-xs uppercase tracking-[0.22em] text-gold font-bold">Poetry &amp; Live Performances</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-slate-950 mt-1">
-            Featured Poetry Performance &amp; Kahaniyaan
+          <span class="inline-block px-3.5 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/40 text-[11px] uppercase tracking-[0.2em] font-bold">Poetry &amp; Live Performances</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-slate-950 mt-2">
+            Featured Poetry Performance &amp; <span class="italic text-gold">Kahaniyaan</span>
           </h2>
         </div>
 
-        <div class="luxury-card rounded-2xl bg-white border border-stone-200 p-3 sm:p-4 space-y-3 shadow-xs">
-          <div class="aspect-video w-full rounded-xl overflow-hidden bg-stone-900">
+        <div class="luxury-card rounded-2xl bg-white p-3.5 sm:p-5 space-y-3.5">
+          <div class="aspect-video w-full rounded-xl overflow-hidden bg-slate-950 ring-2 ring-amber-400/40 shadow-md">
             <iframe
               class="w-full h-full"
               src="https://www.youtube.com/embed/Pe51Mn1WpVQ"
@@ -632,52 +725,52 @@ div:has(> img[src*="assets/media/gallery/"]) {
               allowfullscreen
             ></iframe>
           </div>
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-600 px-1">
-            <span>Storytelling Initiative: <strong class="text-gold">Kahaniyaan</strong> (YouTube: kahaniyaan98)</span>
-            <a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="text-crimsonAccent font-semibold hover:text-gold transition">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-700 px-1 pt-0.5">
+            <span>Storytelling Initiative: <strong class="text-gold font-bold">Kahaniyaan</strong> (YouTube: kahaniyaan98)</span>
+            <a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="text-crimsonAccent font-bold hover:text-gold transition">
               Watch on YouTube ↗
             </a>
           </div>
         </div>
 
-        <div class="flex flex-wrap gap-2 text-xs text-slate-700 font-medium">
-          <span class="px-3 py-1 rounded-full bg-white border border-stone-200 hover:border-gold transition shadow-2xs">Love &amp; Romance</span>
-          <span class="px-3 py-1 rounded-full bg-white border border-stone-200 hover:border-gold transition shadow-2xs">Heartbreak &amp; Separation</span>
-          <span class="px-3 py-1 rounded-full bg-white border border-stone-200 hover:border-gold transition shadow-2xs">Human Relationships</span>
-          <span class="px-3 py-1 rounded-full bg-white border border-stone-200 hover:border-gold transition shadow-2xs">Loneliness &amp; Memories</span>
-          <span class="px-3 py-1 rounded-full bg-white border border-stone-200 hover:border-gold transition shadow-2xs">Social Realities</span>
+        <div class="flex flex-wrap gap-2 text-xs font-semibold">
+          <span class="px-3.5 py-1.5 rounded-full bg-[#121B2E] text-amber-200 border border-amber-400/30 shadow-2xs">Love &amp; Romance</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white text-slate-900 border border-amber-900/20 hover:border-gold transition shadow-2xs">Heartbreak &amp; Separation</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white text-slate-900 border border-amber-900/20 hover:border-gold transition shadow-2xs">Human Relationships</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white text-slate-900 border border-amber-900/20 hover:border-gold transition shadow-2xs">Loneliness &amp; Memories</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white text-slate-900 border border-amber-900/20 hover:border-gold transition shadow-2xs">Social Realities</span>
         </div>
       </div>
 
-      <!-- Original Stories IP & Zero-Leak Security Card -->
+      <!-- Original Stories IP & Zero-Leak Security Card (Deep Spotlight Card) -->
       <div class="md:col-span-5 space-y-5 min-w-0">
-        <div class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-7 space-y-4 shadow-xs">
-          <span class="text-xs uppercase tracking-[0.22em] text-crimsonAccent font-bold">Original Stories &amp; IP Safety</span>
-          <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">
-            Zero-Leak Architecture &amp; Story Protection
+        <div class="spotlight-card rounded-2xl p-5 sm:p-7 space-y-4">
+          <span class="inline-block px-3 py-1 rounded-full bg-white/10 border border-amber-300/40 text-[11px] uppercase tracking-[0.2em] text-amber-300 font-bold">Original Stories &amp; IP Safety</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-white">
+            Zero-Leak Architecture &amp; <span class="italic text-amber-300">Story Protection</span>
           </h3>
-          <p class="text-sm text-slate-700 leading-relaxed">
+          <p class="text-sm text-slate-200/90 leading-relaxed">
             Original Gujarati and Hindi film and web series concepts span Romantic Drama, Family Drama, Suspense &amp; Thriller, Mystery &amp; Crime, Psychological Drama, and Social Drama.
           </p>
-          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
-            <li class="flex items-start gap-2">
-              <span class="text-gold font-bold">•</span>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-100/90">
+            <li class="flex items-start gap-2.5">
+              <span class="text-amber-300 font-bold mt-0.5">✦</span>
               <span>Full manuscripts and unpublished scripts are never placed in public web files.</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-gold font-bold">•</span>
+            <li class="flex items-start gap-2.5">
+              <span class="text-amber-300 font-bold mt-0.5">✦</span>
               <span>Enquiries route cleanly without storing sensitive details in exposed databases.</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="text-gold font-bold">•</span>
+            <li class="flex items-start gap-2.5">
+              <span class="text-amber-300 font-bold mt-0.5">✦</span>
               <span>Structured media folders and clean update flow for effortless maintenance.</span>
             </li>
           </ul>
-          <div class="pt-2 flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
-            <a href="literature-stories.html" class="text-center px-4 py-2.5 rounded-xl bg-gold text-white text-xs font-semibold hover:bg-crimsonAccent active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-xs">
+          <div class="pt-3 flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
+            <a href="literature-stories.html" class="text-center px-4 py-2.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-bold hover:bg-amber-400 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-md">
               Original Stories &amp; Books
             </a>
-            <a href="contact.html" class="text-center px-4 py-2.5 rounded-xl bg-ivoryCard border border-stone-300 text-slate-900 text-xs font-semibold hover:border-gold hover:text-gold active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
+            <a href="contact.html" class="text-center px-4 py-2.5 rounded-xl bg-white/10 border border-amber-300/45 text-amber-200 text-xs font-semibold hover:bg-white/20 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
               Enquiry &amp; Security Details
             </a>
           </div>
@@ -686,50 +779,50 @@ div:has(> img[src*="assets/media/gallery/"]) {
     </div>
   </section>
 
-  <!-- Enhanced Footer with Backlinks & Sitemap -->
-  <footer class="w-full bg-gradient-to-b from-charcoal to-charcoalLight/70 pt-12 sm:pt-14 pb-8 border-t-2 border-gold/60">
+  <!-- Signature Spotlight Footer -->
+  <footer class="w-full bg-gradient-to-br from-[#0F172A] via-[#17233B] to-[#231822] text-slate-100 pt-12 sm:pt-16 pb-8 border-t-2 border-amber-400/70 shadow-[0_-12px_36px_-14px_rgba(15,23,42,0.35)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7 sm:gap-8 text-sm min-w-0">
-        <div class="space-y-3 min-w-0">
-          <div class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">Jasmin Bhatt</div>
-          <p class="text-xs text-slate-700 leading-relaxed">
+        <div class="space-y-3 min-w-0 rounded-2xl bg-white/[0.06] border border-amber-300/25 p-4 sm:p-5 backdrop-blur-xs">
+          <div class="font-serif text-2xl sm:text-3xl font-semibold text-white">Jasmin Bhatt</div>
+          <p class="text-xs text-slate-300 leading-relaxed">
             Writer, Director, Actor, Poet, Author, Storyteller, Educator and Tax Consultant from Bhavnagar, Gujarat, India.
           </p>
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-stone-300 text-[11px] font-medium text-slate-800">
-            <span class="w-2 h-2 rounded-full bg-gold"></span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-300/40 text-[11px] font-semibold text-amber-200">
+            <span class="w-2 h-2 rounded-full bg-amber-300"></span>
             <span>Bhavnagar • Gujarat</span>
           </div>
         </div>
 
-        <div class="space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Pages</div>
-          <ul class="space-y-2 text-xs text-slate-700">
-            <li><a href="index.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Home</a></li>
-            <li><a href="about.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">About, Education &amp; Tax/Law</a></li>
-            <li><a href="works.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Cinema, OTT, Theatre &amp; Audio</a></li>
-            <li><a href="literature-stories.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Books, Poetry &amp; Stories</a></li>
-            <li><a href="media-gallery.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Awards, Press &amp; Gallery</a></li>
-            <li><a href="contact.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Contact &amp; Security</a></li>
+        <div class="space-y-3 min-w-0 rounded-2xl bg-white/[0.04] border border-amber-300/20 p-4 sm:p-5">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold pb-1.5 border-b border-amber-300/25">Pages</div>
+          <ul class="space-y-2 text-xs text-slate-200 font-medium">
+            <li><a href="index.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Home</a></li>
+            <li><a href="about.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">About, Education &amp; Tax/Law</a></li>
+            <li><a href="works.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Cinema, OTT, Theatre &amp; Audio</a></li>
+            <li><a href="literature-stories.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Books, Poetry &amp; Stories</a></li>
+            <li><a href="media-gallery.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Awards, Press &amp; Gallery</a></li>
+            <li><a href="contact.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Contact &amp; Security</a></li>
           </ul>
         </div>
 
-        <div class="space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Official Profiles &amp; Books</div>
-          <ul class="space-y-2 text-xs text-slate-700 break-words">
-            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">IMDb Profile (nm15420877) ↗</a></li>
-            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">YouTube Poetry Performance ↗</a></li>
-            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
-            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Love Vs We… (Amazon) ↗</a></li>
+        <div class="space-y-3 min-w-0 rounded-2xl bg-white/[0.04] border border-amber-300/20 p-4 sm:p-5">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold pb-1.5 border-b border-amber-300/25">Official Profiles &amp; Books</div>
+          <ul class="space-y-2 text-xs text-slate-200 font-medium break-words">
+            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">IMDb Profile (nm15420877) ↗</a></li>
+            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">YouTube Poetry Performance ↗</a></li>
+            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
+            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">Love Vs We… (Amazon) ↗</a></li>
           </ul>
         </div>
 
-        <div class="space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Social &amp; Channels</div>
-          <div class="rounded-xl bg-white/85 border border-stone-200 p-4 space-y-2.5 shadow-2xs">
-            <p class="text-xs text-slate-700 leading-relaxed">
+        <div class="space-y-3 min-w-0 rounded-2xl bg-amber-400/[0.08] border border-amber-300/35 p-4 sm:p-5">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold pb-1.5 border-b border-amber-300/25">Social &amp; Channels</div>
+          <div class="space-y-3">
+            <p class="text-xs text-slate-200 leading-relaxed font-medium">
               Instagram • Facebook • LinkedIn • YouTube (Kahaniyaan / kahaniyaan98) • IMDb • Amazon
             </p>
-            <a href="contact.html" class="inline-flex items-center gap-1 py-0.5 text-xs font-bold text-gold hover:text-crimsonAccent transition">
+            <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-500 text-slate-950 text-xs font-bold hover:bg-amber-400 transition shadow-xs">
               <span>Connect For Collaborations</span>
               <span>→</span>
             </a>
@@ -739,8 +832,8 @@ div:has(> img[src*="assets/media/gallery/"]) {
 
       <div class="gold-hairline"></div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-xs text-slate-600 text-center sm:text-left">
-        <p class="font-medium text-slate-700">© Jasmin Bhatt. All rights reserved.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-xs text-slate-300 text-center sm:text-left font-medium">
+        <p class="text-amber-200 font-semibold">© Jasmin Bhatt. All rights reserved.</p>
         <p>Gujarati • Hindi • English • Bhavnagar, Gujarat</p>
       </div>
     </div>

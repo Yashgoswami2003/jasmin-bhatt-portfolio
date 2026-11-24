@@ -7,7 +7,7 @@
   <meta name="description" content="Filmography, OTT web series Library – Ek Anokhi Varta, Super Maanav, Man Melo, IMDb profile, theatre productions since 2012, and audio stories by Jasmin Bhatt." />
   <meta name="keywords" content="Jasmin Bhatt IMDb, nm15420877, Super Maanav, Man Melo, Library Ek Anokhi Varta, MX Player, Hungama, Airtel Xstream, Aavu Kem, Jyot, Overtime, Saaransh, Meera, Khamosh Gawah" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#FAF7F2" />
+  <meta name="theme-color" content="#121B2E" />
   <link rel="canonical" href="https://www.imdb.com/name/nm15420877/" />
 
   <meta property="og:type" content="website" />
@@ -62,13 +62,13 @@
       theme: {
         extend: {
           colors: {
-            obsidian: '#FAF7F2',
-            charcoal: '#F1ECE2',
-            charcoalLight: '#E6DFD1',
-            ivory: '#FFFFFF',
-            ivoryCard: '#FFFDF9',
+            obsidian: '#F7F3EA',
+            charcoal: '#EFE8DA',
+            charcoalLight: '#E3D8C3',
+            ivory: '#FFFDF9',
+            ivoryCard: '#FFFFFF',
             gold: '#B47B1E',
-            goldLight: '#D49A34',
+            goldLight: '#E0A83E',
             crimsonAccent: '#8C3B2B'
           },
           fontFamily: {
@@ -83,18 +83,23 @@
   <style>
     html,
     body {
-      overflow-x: hidden;
-      background-color: #FAF7F2;
+      overflow-x: clip;
+      background-color: #F7F3EA;
+      background-image:
+        radial-gradient(ellipse 85% 45% at 15% 0%, rgba(180, 123, 30, 0.14), transparent 62%),
+        radial-gradient(ellipse 70% 42% at 88% 12%, rgba(140, 59, 43, 0.08), transparent 60%),
+        radial-gradient(ellipse 75% 45% at 50% 62%, rgba(224, 168, 62, 0.10), transparent 65%),
+        linear-gradient(180deg, #FAF7F0 0%, #F3EDE0 55%, #E9DFC9 100%);
       color: #1E293B;
       font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      -webkit-tap-highlight-color: rgba(180, 123, 30, 0.16);
+      -webkit-tap-highlight-color: rgba(180, 123, 30, 0.18);
     }
     a,
     button {
       touch-action: manipulation;
     }
 
-    /* Slow-Network / Tailwind CDN Fallback Layer (Light Theme) */
+    /* Slow-Network / Tailwind CDN Fallback Layer */
     .max-w-7xl {
       max-width: 80rem;
       margin-left: auto;
@@ -141,10 +146,10 @@
       color: #FFFFFF;
     }
     .bg-charcoal {
-      background-color: #F1ECE2;
+      background-color: #EFE8DA;
     }
     .bg-ivoryCard {
-      background-color: #FFFDF9;
+      background-color: #FFFFFF;
     }
     .rounded-2xl {
       border-radius: 1rem;
@@ -153,24 +158,60 @@
       border-radius: 0.75rem;
     }
     .shadow-xs {
-      box-shadow: 0 1px 3px rgba(24, 24, 27, 0.06);
+      box-shadow: 0 2px 6px rgba(24, 24, 27, 0.07);
     }
 
     .gold-hairline {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(180, 123, 30, 0.55), transparent);
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(246, 199, 107, 0.9), rgba(224, 168, 62, 1), rgba(246, 199, 107, 0.9), transparent);
     }
     .luxury-card,
     .credit-card,
     .stage-box {
       position: relative;
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF8 100%);
+      border: 1px solid rgba(180, 123, 30, 0.26);
+      box-shadow: 0 14px 32px -12px rgba(15, 23, 42, 0.13), 0 3px 8px rgba(180, 123, 30, 0.09);
       transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.32s ease, box-shadow 0.32s ease, background-color 0.32s ease;
+    }
+    .luxury-card,
+    .credit-card {
+      border-top: 4px solid #B47B1E;
+    }
+    .luxury-card::before,
+    .credit-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at top right, rgba(224, 168, 62, 0.12), transparent 50%);
+      pointer-events: none;
+    }
+    .luxury-card > *,
+    .credit-card > * {
+      position: relative;
+      z-index: 1;
     }
     .luxury-card:active,
     .credit-card:active,
     .stage-box:active {
       transform: scale(0.99);
-      border-color: #B47B1E;
+      border-color: #8C3B2B;
+    }
+    .spotlight-card {
+      position: relative;
+      background:
+        radial-gradient(ellipse 85% 65% at 88% 12%, rgba(224, 168, 62, 0.24), transparent 60%),
+        linear-gradient(145deg, #121B2E 0%, #1A2842 58%, #241A24 100%);
+      color: #F8FAFC;
+      border: 1px solid rgba(224, 168, 62, 0.52);
+      border-top: 4px solid #E0A83E;
+      box-shadow: 0 24px 50px -14px rgba(15, 23, 42, 0.38);
+      transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.34s ease, box-shadow 0.34s ease;
+    }
+    .spotlight-card > * {
+      position: relative;
+      z-index: 1;
     }
     .nav-link-hover {
       position: relative;
@@ -183,47 +224,35 @@
       bottom: -4px;
       width: 0;
       height: 2px;
-      background-color: #B47B1E;
+      background: linear-gradient(90deg, #B47B1E, #E0A83E);
       transition: width 0.25s ease;
     }
     @media (hover: hover) and (pointer: fine) {
       .luxury-card:hover,
       .credit-card:hover {
-        transform: translateY(-6px);
+        transform: translateY(-7px);
         border-color: #B47B1E;
-        box-shadow: 0 22px 42px -14px rgba(180, 123, 30, 0.22), 0 8px 18px -10px rgba(24, 24, 27, 0.12);
+        box-shadow: 0 28px 50px -14px rgba(180, 123, 30, 0.28), 0 12px 24px -10px rgba(15, 23, 42, 0.16);
+      }
+      .spotlight-card:hover {
+        transform: translateY(-6px);
+        border-color: #F6C76B;
+        box-shadow: 0 28px 56px -12px rgba(15, 23, 42, 0.45), 0 0 26px -8px rgba(224, 168, 62, 0.28);
       }
       .stage-box:hover {
         transform: translateY(-3px);
         border-color: #B47B1E;
-        background-color: #FFFFFF;
+        background: #FFFFFF;
       }
       .nav-link-hover:hover::after {
         width: 100%;
       }
     }
-  
+
 /* === AUTO-MOBILE-IMAGE-FIX-START === */
-/* Classy, Elegant & Premium Editorial Background */
-body {
-  background-color: #F6F2EA !important;
-  background-image:
-    radial-gradient(circle at 12% 8%, rgba(180, 138, 66, 0.08), transparent 42%),
-    radial-gradient(circle at 88% 14%, rgba(128, 34, 44, 0.05), transparent 38%),
-    linear-gradient(180deg, #F8F5EE 0%, #F3EEE3 55%, #EFE9DC 100%) !important;
-  background-attachment: fixed;
-}
-
-section.bg-white,
-section.bg-cream,
-div.bg-white,
-div.bg-cream {
-  background-color: rgba(255, 253, 249, 0.88);
-}
-
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -235,6 +264,28 @@ html, body {
 img, picture, svg, video, iframe {
   display: block;
   max-width: 100%;
+}
+
+.hero-spotlight {
+  position: relative;
+  background:
+    radial-gradient(ellipse 75% 65% at 88% 18%, rgba(224, 168, 62, 0.26), transparent 58%),
+    radial-gradient(ellipse 70% 60% at 12% 90%, rgba(140, 59, 43, 0.30), transparent 60%),
+    linear-gradient(135deg, #121B2E 0%, #1B2944 52%, #271C26 100%) !important;
+  color: #F8FAFC !important;
+  border-bottom: 2px solid rgba(224, 168, 62, 0.65) !important;
+  box-shadow: 0 24px 55px -20px rgba(15, 23, 42, 0.38) !important;
+}
+
+.hero-spotlight h1,
+.hero-spotlight h2,
+.hero-spotlight strong {
+  color: #FFFFFF !important;
+}
+
+.hero-spotlight h1 span.italic {
+  color: #F6C76B !important;
+  text-shadow: 0 2px 18px rgba(246, 199, 107, 0.28);
 }
 
 /* Portrait: clean top-focused framing across mobile & desktop */
@@ -305,14 +356,15 @@ div:has(> img[src*="assets/media/gallery/"]) {
   }
 
   h1 {
-    font-size: clamp(1.9rem, 8vw, 2.55rem) !important;
-    line-height: 1.12 !important;
+    font-size: clamp(2rem, 8.2vw, 2.7rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.015em;
     word-break: break-word;
   }
 
   h2 {
-    font-size: clamp(1.55rem, 6.4vw, 2.1rem) !important;
-    line-height: 1.16 !important;
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem) !important;
+    line-height: 1.15 !important;
     word-break: break-word;
   }
 
@@ -321,7 +373,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
   }
 
   a, button {
-    min-height: 40px;
+    min-height: 42px;
   }
 
   img[src*="assets/media/books/"] {
@@ -337,13 +389,12 @@ div:has(> img[src*="assets/media/gallery/"]) {
   }
 }
 /* === AUTO-MOBILE-IMAGE-FIX-END === */
-
   </style>
 </head>
-<body class="bg-obsidian text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-white">
+<body class="bg-obsidian text-slate-800 font-sans antialiased overflow-x-clip selection:bg-gold selection:text-white">
 
   <!-- Top Scroll Progress Bar -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-goldLight via-gold to-crimsonAccent z-[60] transition-[width] duration-150"></div>
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[2.5px] w-0 bg-gradient-to-r from-goldLight via-amber-300 to-crimsonAccent z-[60] transition-[width] duration-150"></div>
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs">
@@ -391,59 +442,59 @@ div:has(> img[src*="assets/media/gallery/"]) {
     </div>
   </header>
 
-  <!-- Page Hero + IMDb Spotlight -->
-  <section class="w-full py-10 sm:py-16 md:py-20 border-b border-stone-200/90 bg-gradient-to-b from-white via-obsidian to-charcoal/50">
+  <!-- Page Hero + IMDb Spotlight (Signature Spotlight) -->
+  <section class="hero-spotlight relative w-full py-10 sm:py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-7 sm:gap-8 md:gap-10 items-center">
       <div class="md:col-span-8 space-y-4 sm:space-y-5 min-w-0">
-        <div class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white border border-gold/40 text-gold text-[10px] sm:text-xs font-semibold shadow-2xs">
+        <div class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-amber-300/45 text-amber-200 text-[10px] sm:text-xs font-semibold shadow-sm backdrop-blur-xs">
           <span>Filmography</span>
-          <span class="text-stone-300">•</span>
+          <span class="text-amber-200/40">•</span>
           <span>Writing &amp; Direction</span>
-          <span class="text-stone-300">•</span>
+          <span class="text-amber-200/40">•</span>
           <span>Theatre</span>
-          <span class="text-stone-300">•</span>
+          <span class="text-amber-200/40">•</span>
           <span>Audio Stories</span>
         </div>
 
-        <h1 class="font-serif text-[34px] sm:text-5xl md:text-6xl font-semibold text-slate-950 leading-[1.08] sm:leading-[1.06] tracking-tight break-words">
-          Cinema, OTT, Stage &amp; Audio — <span class="text-gold italic">Character-Driven Storytelling.</span>
+        <h1 class="font-serif text-[34px] sm:text-5xl md:text-6xl font-semibold text-white leading-[1.08] sm:leading-[1.06] tracking-tight break-words">
+          Cinema, OTT, Stage &amp; Audio — <span class="text-amber-300 italic">Character-Driven Storytelling.</span>
         </h1>
 
-        <p class="text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
+        <p class="text-slate-100/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
           Working across Gujarati and Hindi entertainment through feature films, web series, short films, theatrical productions since 2012, and audio storytelling. As a filmmaker, Jasmin Bhatt believes in character-driven narratives that connect regional roots with universal human emotions.
         </p>
 
         <div class="flex flex-col sm:flex-row flex-wrap gap-2.5 pt-1 text-xs">
-          <a href="#film-ott-credits" class="text-center px-4 py-2.5 rounded-xl bg-gold text-white font-semibold hover:bg-crimsonAccent active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-xs">
+          <a href="#film-ott-credits" class="text-center px-4 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold hover:bg-amber-400 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-md">
             Film &amp; OTT Credits
           </a>
-          <a href="#theatre-section" class="text-center px-4 py-2.5 rounded-xl bg-white border border-stone-300 text-slate-900 font-semibold hover:border-gold hover:text-gold active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
+          <a href="#theatre-section" class="text-center px-4 py-2.5 rounded-xl bg-white text-slate-900 font-semibold hover:bg-amber-50 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-sm">
             Theatre (Since 2012)
           </a>
-          <a href="#audio-stories" class="text-center px-4 py-2.5 rounded-xl bg-white border border-stone-300 text-slate-900 font-semibold hover:border-gold hover:text-gold active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
+          <a href="#audio-stories" class="text-center px-4 py-2.5 rounded-xl bg-white/10 border border-amber-300/50 text-amber-200 font-semibold hover:bg-white/20 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200">
             Audio Stories
           </a>
         </div>
       </div>
 
-      <!-- IMDb Profile Card -->
+      <!-- IMDb Profile Card (Signature Spotlight) -->
       <div class="md:col-span-4 min-w-0">
-        <div class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-6 space-y-4 shadow-xs">
+        <div class="spotlight-card rounded-2xl p-5 sm:p-6 space-y-4">
           <div class="flex items-center justify-between gap-2">
-            <span class="px-3 py-1 rounded-full bg-gold text-white text-xs font-bold tracking-wide">IMDb</span>
-            <span class="text-[11px] text-slate-500 font-semibold">nm15420877</span>
+            <span class="px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-bold tracking-wide shadow-xs">IMDb</span>
+            <span class="text-[11px] text-amber-200 font-semibold">nm15420877</span>
           </div>
-          <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">
-            IMDb Film &amp; Screen Profile
+          <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-white">
+            IMDb Film &amp; <span class="italic text-amber-300">Screen Profile</span>
           </h2>
-          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <p class="text-xs sm:text-sm text-slate-200/90 leading-relaxed">
             View screen credits, writing, direction, and acting profile directly on IMDb.
           </p>
           <a
             href="https://www.imdb.com/name/nm15420877/"
             target="_blank"
             rel="noopener noreferrer"
-            class="block w-full text-center py-3 px-4 rounded-xl bg-gold text-white text-xs sm:text-sm font-semibold hover:bg-crimsonAccent active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-xs"
+            class="block w-full text-center py-3 px-4 rounded-xl bg-amber-500 text-slate-950 text-xs sm:text-sm font-bold hover:bg-amber-400 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 shadow-md"
           >
             Visit IMDb Profile ↗
           </a>
@@ -452,13 +503,13 @@ div:has(> img[src*="assets/media/gallery/"]) {
     </div>
   </section>
 
-  <!-- Selected Film & OTT Credits (Light Contrast Band) -->
-  <section id="film-ott-credits" class="w-full bg-ivory text-slate-900 py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
+  <!-- Selected Film & OTT Credits -->
+  <section id="film-ott-credits" class="w-full bg-gradient-to-b from-[#FAF6EE] via-[#F4ECE0] to-[#FAF6EE] text-slate-900 py-12 sm:py-16 md:py-20 border-b border-amber-900/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
-      <div class="max-w-3xl">
-        <span class="text-xs uppercase tracking-[0.22em] text-crimsonAccent font-bold">Filmography &amp; Writing / Direction</span>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1 leading-tight">
-          Selected Film &amp; OTT Credits
+      <div class="max-w-3xl pb-3 border-b border-amber-900/15">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/40 text-[11px] uppercase tracking-[0.2em] font-bold shadow-xs">Filmography &amp; Writing / Direction</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-2 leading-tight">
+          Selected Film &amp; <span class="italic text-gold">OTT Credits</span>
         </h2>
         <p class="text-sm sm:text-base text-slate-700 mt-2">
           Feature films, web series, and digital projects spanning direction, assistant/associate direction, writing, and creative development.
@@ -467,7 +518,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
         <!-- Project 1 -->
-        <article class="credit-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border border-stone-200 border-t-4 border-t-gold shadow-xs flex flex-col justify-between gap-5 min-w-0">
+        <article class="credit-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border-t-4 border-t-gold flex flex-col justify-between gap-5 min-w-0">
           <div class="space-y-4">
             <div class="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-charcoal text-slate-950 border border-gold/40">
               <img
@@ -487,7 +538,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
             </div>
           </div>
 
-          <div class="pt-4 border-t border-stone-200 flex items-center justify-between gap-2 text-xs font-semibold">
+          <div class="pt-4 border-t border-amber-900/12 flex items-center justify-between gap-2 text-xs font-semibold">
             <span class="text-slate-600">Role: Director</span>
             <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-1 text-crimsonAccent hover:text-gold transition">
               IMDb Credit ↗
@@ -496,7 +547,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
         </article>
 
         <!-- Project 2 -->
-        <article class="credit-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border border-stone-200 border-t-4 border-t-crimsonAccent shadow-xs flex flex-col justify-between gap-5 min-w-0">
+        <article class="credit-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border-t-4 border-t-crimsonAccent flex flex-col justify-between gap-5 min-w-0">
           <div class="space-y-4">
             <div class="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-charcoal text-slate-950 border border-gold/40">
               <img
@@ -516,7 +567,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
             </div>
           </div>
 
-          <div class="pt-4 border-t border-stone-200 flex items-center justify-between gap-2 text-xs font-semibold">
+          <div class="pt-4 border-t border-amber-900/12 flex items-center justify-between gap-2 text-xs font-semibold">
             <span class="text-slate-600">Role: Associate / Assistant Director</span>
             <a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-1 text-crimsonAccent hover:text-gold transition">
               IMDb Credit ↗
@@ -525,7 +576,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
         </article>
 
         <!-- Project 3 -->
-        <article class="credit-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border border-stone-200 border-t-4 border-t-gold shadow-xs flex flex-col justify-between gap-5 min-w-0">
+        <article class="credit-card bg-ivoryCard rounded-2xl p-5 sm:p-7 border-t-4 border-t-gold flex flex-col justify-between gap-5 min-w-0">
           <div class="space-y-4">
             <div class="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-charcoal text-slate-950 border border-gold/40">
               <img
@@ -545,7 +596,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
             </div>
           </div>
 
-          <div class="pt-4 border-t border-stone-200 flex items-center justify-between gap-2 text-xs font-semibold">
+          <div class="pt-4 border-t border-amber-900/12 flex items-center justify-between gap-2 text-xs font-semibold">
             <span class="text-slate-600">OTT &amp; Digital Series</span>
             <a href="media-gallery.html#awards-recognition" class="py-1 text-crimsonAccent hover:text-gold transition">
               Awards Details →
@@ -557,12 +608,12 @@ div:has(> img[src*="assets/media/gallery/"]) {
   </section>
 
   <!-- Theatre & Short Film Achievements (Since 2012) -->
-  <section id="theatre-section" class="w-full bg-obsidian py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
+  <section id="theatre-section" class="w-full bg-gradient-to-b from-[#EFE6D5] via-[#E8DCB8]/55 to-[#EFE6D5] py-12 sm:py-16 md:py-20 border-b border-amber-900/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
-      <div class="max-w-3xl">
-        <span class="text-xs uppercase tracking-[0.22em] text-gold font-bold">Theatre &amp; Short Film Achievements</span>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1 leading-tight">
-          Stage Productions Across Mumbai &amp; Ahmedabad (Since 2012)
+      <div class="max-w-3xl pb-3 border-b border-amber-900/15">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/40 text-[11px] uppercase tracking-[0.2em] font-bold shadow-xs">Theatre &amp; Short Film Achievements</span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-2 leading-tight">
+          Stage Productions Across <span class="italic text-gold">Mumbai &amp; Ahmedabad</span> (Since 2012)
         </h2>
         <p class="text-sm sm:text-base text-slate-700 mt-2 leading-relaxed">
           Associated with Gujarati and Hindi theatre since 2012 across acting, writing, direction, and independent storytelling.
@@ -571,32 +622,32 @@ div:has(> img[src*="assets/media/gallery/"]) {
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         <!-- Acting Credits -->
-        <div class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-7 space-y-4 min-w-0 shadow-xs">
-          <span class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Acting Credits</span>
+        <div class="luxury-card rounded-2xl bg-white p-5 sm:p-7 space-y-4 min-w-0">
+          <span class="inline-block px-3 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/35 text-[11px] uppercase tracking-[0.16em] font-bold">Acting Credits</span>
           <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">Stage Performances</h3>
           <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
-            <li class="stage-box p-3.5 rounded-xl bg-ivoryCard border border-stone-200">
+            <li class="stage-box p-3.5 rounded-xl">
               <strong class="text-slate-950">Aavu Kem?</strong> — Actor
             </li>
-            <li class="stage-box p-3.5 rounded-xl bg-ivoryCard border border-stone-200">
+            <li class="stage-box p-3.5 rounded-xl">
               <strong class="text-slate-950">Jyot</strong> (Hindi Play) — Actor
             </li>
-            <li class="stage-box p-3.5 rounded-xl bg-ivoryCard border border-stone-200">
+            <li class="stage-box p-3.5 rounded-xl">
               <strong class="text-slate-950">Overtime</strong> (Hindi Play) — Actor
             </li>
           </ul>
         </div>
 
         <!-- Writing & Direction -->
-        <div class="luxury-card rounded-2xl bg-white border border-stone-200 p-5 sm:p-7 space-y-4 min-w-0 shadow-xs">
-          <span class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Writing &amp; Direction</span>
+        <div class="luxury-card rounded-2xl bg-white p-5 sm:p-7 space-y-4 min-w-0">
+          <span class="inline-block px-3 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/35 text-[11px] uppercase tracking-[0.16em] font-bold">Writing &amp; Direction</span>
           <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">Theatrical Writing &amp; Direction</h3>
           <div class="space-y-3 text-xs sm:text-sm text-slate-700">
-            <div class="stage-box p-3.5 rounded-xl bg-ivoryCard border border-stone-200">
+            <div class="stage-box p-3.5 rounded-xl">
               <div class="font-semibold text-slate-950">JYOT — Hindi Theatrical Production</div>
               <p class="text-slate-600 mt-1">Selected by YES Foundation.</p>
             </div>
-            <div class="stage-box p-3.5 rounded-xl bg-ivoryCard border border-stone-200">
+            <div class="stage-box p-3.5 rounded-xl">
               <div class="font-semibold text-slate-950">SAARANSH — Writing / Theatre Project</div>
               <p class="text-slate-600 mt-1">Secured Second Rank at Saptarshi.</p>
             </div>
@@ -607,25 +658,25 @@ div:has(> img[src*="assets/media/gallery/"]) {
   </section>
 
   <!-- Audio Stories & Digital Entertainment -->
-  <section id="audio-stories" class="w-full bg-white py-12 sm:py-16 md:py-20 border-b border-stone-200/90">
+  <section id="audio-stories" class="w-full bg-gradient-to-b from-[#FAF6EE] via-[#F4ECE0] to-[#FAF6EE] py-12 sm:py-16 md:py-20 border-b border-amber-900/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-3 border-b border-amber-900/15">
         <div class="max-w-3xl">
-          <span class="text-xs uppercase tracking-[0.22em] text-gold font-bold">Audio Stories &amp; Digital Entertainment</span>
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-1 leading-tight">
-            Audio Dramas, Series &amp; Vertical Concepts
+          <span class="inline-block px-3.5 py-1 rounded-full bg-[#121B2E] text-amber-300 border border-amber-400/40 text-[11px] uppercase tracking-[0.2em] font-bold shadow-xs">Audio Stories &amp; Digital Entertainment</span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-950 mt-2 leading-tight">
+            Audio Dramas, Series &amp; <span class="italic text-gold">Vertical Concepts</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-700 mt-2 leading-relaxed">
             Developing original storytelling concepts for audio entertainment platforms and vertical drama formats.
           </p>
         </div>
-        <a href="contact.html" class="text-center px-5 py-3 rounded-xl bg-gold text-white text-xs sm:text-sm font-semibold hover:bg-crimsonAccent active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 self-start md:self-auto shrink-0 shadow-xs">
+        <a href="contact.html" class="text-center px-5 py-3 rounded-xl bg-[#121B2E] text-amber-300 border border-amber-400/40 text-xs sm:text-sm font-bold hover:bg-amber-500 hover:text-slate-950 active:scale-[0.99] md:hover:-translate-y-0.5 transition duration-200 self-start md:self-auto shrink-0 shadow-xs">
           Collaborate On Audio / OTT →
         </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-        <article class="luxury-card rounded-2xl bg-ivoryCard border border-stone-200 border-t-4 border-t-gold p-5 sm:p-6 space-y-2.5 min-w-0 shadow-xs">
+        <article class="luxury-card rounded-2xl bg-ivoryCard border-t-4 border-t-gold p-5 sm:p-6 space-y-2.5 min-w-0">
           <div class="text-xs uppercase tracking-wider font-bold text-crimsonAccent">Audio Drama</div>
           <h3 class="font-serif text-2xl font-semibold text-slate-950">Meera</h3>
           <p class="text-sm text-slate-700 leading-relaxed">
@@ -633,7 +684,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
           </p>
         </article>
 
-        <article class="luxury-card rounded-2xl bg-ivoryCard border border-stone-200 border-t-4 border-t-crimsonAccent p-5 sm:p-6 space-y-2.5 min-w-0 shadow-xs">
+        <article class="luxury-card rounded-2xl bg-ivoryCard border-t-4 border-t-crimsonAccent p-5 sm:p-6 space-y-2.5 min-w-0">
           <div class="text-xs uppercase tracking-wider font-bold text-crimsonAccent">Audio Thriller Series • 55 Episodes</div>
           <h3 class="font-serif text-2xl font-semibold text-slate-950">Khamosh Gawah</h3>
           <p class="text-sm text-slate-700 leading-relaxed">
@@ -641,7 +692,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
           </p>
         </article>
 
-        <article class="luxury-card rounded-2xl bg-ivoryCard border border-stone-200 border-t-4 border-t-gold p-5 sm:p-6 space-y-2.5 min-w-0 shadow-xs">
+        <article class="luxury-card rounded-2xl bg-ivoryCard border-t-4 border-t-gold p-5 sm:p-6 space-y-2.5 min-w-0">
           <div class="text-xs uppercase tracking-wider font-bold text-crimsonAccent">Original Formats</div>
           <h3 class="font-serif text-2xl font-semibold text-slate-950">Audio &amp; Vertical Drama Concepts</h3>
           <p class="text-sm text-slate-700 leading-relaxed">
@@ -652,50 +703,50 @@ div:has(> img[src*="assets/media/gallery/"]) {
     </div>
   </section>
 
-  <!-- Enhanced Footer -->
-  <footer class="w-full bg-gradient-to-b from-charcoal to-charcoalLight/70 pt-12 sm:pt-14 pb-8 border-t-2 border-gold/60">
+  <!-- Signature Spotlight Footer -->
+  <footer class="w-full bg-gradient-to-br from-[#0F172A] via-[#17233B] to-[#231822] text-slate-100 pt-12 sm:pt-16 pb-8 border-t-2 border-amber-400/70 shadow-[0_-12px_36px_-14px_rgba(15,23,42,0.35)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-10">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7 sm:gap-8 text-sm min-w-0">
-        <div class="space-y-3 min-w-0">
-          <div class="font-serif text-2xl sm:text-3xl font-semibold text-slate-950">Jasmin Bhatt</div>
-          <p class="text-xs text-slate-700 leading-relaxed">
+        <div class="space-y-3 min-w-0 rounded-2xl bg-white/[0.06] border border-amber-300/25 p-4 sm:p-5 backdrop-blur-xs">
+          <div class="font-serif text-2xl sm:text-3xl font-semibold text-white">Jasmin Bhatt</div>
+          <p class="text-xs text-slate-300 leading-relaxed">
             Writer, Director, Actor, Poet, Author, Storyteller, Educator and Tax Consultant from Bhavnagar, Gujarat, India.
           </p>
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-stone-300 text-[11px] font-medium text-slate-800">
-            <span class="w-2 h-2 rounded-full bg-gold"></span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-300/40 text-[11px] font-semibold text-amber-200">
+            <span class="w-2 h-2 rounded-full bg-amber-300"></span>
             <span>Bhavnagar • Gujarat</span>
           </div>
         </div>
 
-        <div class="space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Pages</div>
-          <ul class="space-y-2 text-xs text-slate-700">
-            <li><a href="index.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Home</a></li>
-            <li><a href="about.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">About, Education &amp; Tax/Law</a></li>
-            <li><a href="works.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Cinema, OTT, Theatre &amp; Audio</a></li>
-            <li><a href="literature-stories.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Books, Poetry &amp; Stories</a></li>
-            <li><a href="media-gallery.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Awards, Press &amp; Gallery</a></li>
-            <li><a href="contact.html" class="py-0.5 hover:text-gold md:hover:translate-x-1 inline-block transition duration-200">Contact &amp; Security</a></li>
+        <div class="space-y-3 min-w-0 rounded-2xl bg-white/[0.04] border border-amber-300/20 p-4 sm:p-5">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold pb-1.5 border-b border-amber-300/25">Pages</div>
+          <ul class="space-y-2 text-xs text-slate-200 font-medium">
+            <li><a href="index.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Home</a></li>
+            <li><a href="about.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">About, Education &amp; Tax/Law</a></li>
+            <li><a href="works.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Cinema, OTT, Theatre &amp; Audio</a></li>
+            <li><a href="literature-stories.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Books, Poetry &amp; Stories</a></li>
+            <li><a href="media-gallery.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Awards, Press &amp; Gallery</a></li>
+            <li><a href="contact.html" class="py-0.5 hover:text-amber-300 md:hover:translate-x-1 inline-block transition duration-200">Contact &amp; Security</a></li>
           </ul>
         </div>
 
-        <div class="space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Official Links</div>
-          <ul class="space-y-2 text-xs text-slate-700 break-words">
-            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">IMDb Profile (nm15420877) ↗</a></li>
-            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">YouTube Poetry Performance ↗</a></li>
-            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
-            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-crimsonAccent font-medium transition">Love Vs We… (Amazon) ↗</a></li>
+        <div class="space-y-3 min-w-0 rounded-2xl bg-white/[0.04] border border-amber-300/20 p-4 sm:p-5">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold pb-1.5 border-b border-amber-300/25">Official Links</div>
+          <ul class="space-y-2 text-xs text-slate-200 font-medium break-words">
+            <li><a href="https://www.imdb.com/name/nm15420877/" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">IMDb Profile (nm15420877) ↗</a></li>
+            <li><a href="https://youtu.be/Pe51Mn1WpVQ" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">YouTube Poetry Performance ↗</a></li>
+            <li><a href="https://www.amazon.in/Sambandh-Aavo-Pan-Jasmin-Bhatt/dp/9385128507" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">Ek Sambandh… Aavo Pan… (Amazon) ↗</a></li>
+            <li><a href="https://www.amazon.in/Love-Vs-We-Distance-Desire/dp/9390347335" target="_blank" rel="noopener noreferrer" class="py-0.5 inline-block hover:text-amber-300 transition">Love Vs We… (Amazon) ↗</a></li>
           </ul>
         </div>
 
-        <div class="space-y-3 min-w-0">
-          <div class="text-xs uppercase tracking-[0.2em] text-crimsonAccent font-bold">Collaborations</div>
-          <div class="rounded-xl bg-white/85 border border-stone-200 p-4 space-y-2 shadow-2xs">
-            <p class="text-xs text-slate-700 leading-relaxed">
+        <div class="space-y-3 min-w-0 rounded-2xl bg-amber-400/[0.08] border border-amber-300/35 p-4 sm:p-5">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold pb-1.5 border-b border-amber-300/25">Collaborations</div>
+          <div class="space-y-3">
+            <p class="text-xs text-slate-200 leading-relaxed font-medium">
               For film producers, OTT platforms, theatre, audio dramas, and creative partnerships.
             </p>
-            <a href="contact.html" class="inline-flex items-center gap-1 text-xs font-bold text-gold hover:text-crimsonAccent transition">
+            <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-500 text-slate-950 text-xs font-bold hover:bg-amber-400 transition shadow-xs">
               <span>Send Collaboration Enquiry</span>
               <span>→</span>
             </a>
@@ -705,8 +756,8 @@ div:has(> img[src*="assets/media/gallery/"]) {
 
       <div class="gold-hairline"></div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-xs text-slate-600 text-center sm:text-left">
-        <p class="font-medium text-slate-700">© Jasmin Bhatt. All rights reserved.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-xs text-slate-300 text-center sm:text-left font-medium">
+        <p class="text-amber-200 font-semibold">© Jasmin Bhatt. All rights reserved.</p>
         <p>Gujarati • Hindi • English • Bhavnagar, Gujarat</p>
       </div>
     </div>
