@@ -92,7 +92,11 @@
     html,
     body {
       overflow-x: hidden;
-      background-color: #FAF7F2;
+      background-color: #F6F2EA;
+      background-image:
+        radial-gradient(circle at 12% 8%, rgba(180, 123, 30, 0.08), transparent 42%),
+        radial-gradient(circle at 88% 14%, rgba(140, 59, 43, 0.05), transparent 38%),
+        linear-gradient(180deg, #F8F5EE 0%, #F3EEE3 55%, #EFE9DC 100%);
       color: #1E293B;
       font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       -webkit-tap-highlight-color: rgba(180, 123, 30, 0.16);
@@ -232,8 +236,25 @@
         background-color: #FFFFFF;
       }
     }
-  
+
 /* === AUTO-MOBILE-IMAGE-FIX-START === */
+/* Classy, Elegant & Premium Editorial Background */
+body {
+  background-color: #F6F2EA !important;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(180, 138, 66, 0.08), transparent 42%),
+    radial-gradient(circle at 88% 14%, rgba(128, 34, 44, 0.05), transparent 38%),
+    linear-gradient(180deg, #F8F5EE 0%, #F3EEE3 55%, #EFE9DC 100%) !important;
+  background-attachment: fixed;
+}
+
+section.bg-white,
+section.bg-cream,
+div.bg-white,
+div.bg-cream {
+  background-color: rgba(255, 253, 249, 0.88);
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -313,6 +334,10 @@ div:has(> img[src*="assets/media/gallery/"]) {
 }
 
 @media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
+  }
+
   h1 {
     font-size: clamp(1.9rem, 8vw, 2.55rem) !important;
     line-height: 1.12 !important;
@@ -346,7 +371,6 @@ div:has(> img[src*="assets/media/gallery/"]) {
   }
 }
 /* === AUTO-MOBILE-IMAGE-FIX-END === */
-
   </style>
 </head>
 <body class="bg-obsidian text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-gold selection:text-white">
@@ -468,7 +492,7 @@ div:has(> img[src*="assets/media/gallery/"]) {
         <div class="portrait-frame rounded-2xl bg-white border border-stone-200/90 p-2.5 sm:p-3 shadow-md">
           <div class="relative aspect-[4/5] w-full rounded-xl overflow-hidden bg-charcoal border border-stone-200">
             <img
-              src="assets/media/portrait/jasmin-bhatt-profile.jpeg"
+              src="assets/media/portrait/New profile pic.jpg"
               alt="Jasmin Bhatt — Writer, Director, Actor, Poet, Author & Tax Consultant from Bhavnagar, Gujarat"
               class="w-full h-full object-cover object-top"
             />

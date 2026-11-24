@@ -12,11 +12,32 @@ HTML_FILES = [
     "contact.html",
 ]
 
+# Agar 'New profile pic' ka exact naam + extension pata ho toh yahan likh do;
+# khali ("") chhodne par assets/media/portrait/ ke andar 'New profile pic*' automatically dhoondh lega.
+NEW_PROFILE_FILENAME = ""
+
 MARKER_START = "/* === AUTO-MOBILE-IMAGE-FIX-START === */"
 MARKER_END = "/* === AUTO-MOBILE-IMAGE-FIX-END === */"
 
 GLOBAL_FIX_CSS = f"""
 {MARKER_START}
+/* Classy, Elegant & Premium Editorial Background */
+body {{
+  background-color: #F6F2EA !important;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(180, 138, 66, 0.08), transparent 42%),
+    radial-gradient(circle at 88% 14%, rgba(128, 34, 44, 0.05), transparent 38%),
+    linear-gradient(180deg, #F8F5EE 0%, #F3EEE3 55%, #EFE9DC 100%) !important;
+  background-attachment: fixed;
+}}
+
+section.bg-white,
+section.bg-cream,
+div.bg-white,
+div.bg-cream {{
+  background-color: rgba(255, 253, 249, 0.88);
+}}
+
 html, body {{
   max-width: 100%;
   overflow-x: hidden;
@@ -96,6 +117,10 @@ div:has(> img[src*="assets/media/gallery/"]) {{
 }}
 
 @media (max-width: 767px) {{
+  body {{
+    background-attachment: scroll;
+  }}
+
   h1 {{
     font-size: clamp(1.9rem, 8vw, 2.55rem) !important;
     line-height: 1.12 !important;
@@ -142,13 +167,127 @@ def backup_files():
     print(f"[Backup] Saved original HTML copies to: {backup_dir}")
 
 
-def patch_html(content: str) -> str:
+def resolve_new_profile_src() -> str | None:
+    portrait_dir = os.path.join("assets", "media", "portrait")
+    if not os.path.isdir(portrait_dir):
+        return None
+
+    if NEW_PROFILE_FILENAME.strip():
+        candidate = os.path.join(portrait_dir, NEW_PROFILE_FILENAME.strip())
+        if os.path.isfile(candidate):
+            return f"assets/media/portrait/{NEW_PROFILE_FILENAME.strip()}"
+
+    # Look for any file starting with 'new profile pic' (case-insensitive)
+    for entry in os.listdir(portrait_dir):
+        full_path = os.path.join(portrait_dir, entry)
+        if not os.path.isfile(full_path):
+            continue
+        stem, _ = os.path.splitext(entry)
+        if stem.strip().lower().startswith("new profile pic") or stem.strip().lower().startswith("new-profile-pic"):
+            return f"assets/media/portrait/{entry}"
+
+    return None
+
+
+def find_existing_media_by_folder(subfolder: str) -> list[str]:
+    folder_path = os.path.join("assets", "media", subfolder)
+    if not os.path.isdir(folder_path):
+        return []
+    valid_exts = {".jpg", ".jpeg", ".png", ".webp"}
+    files = []
+    for entry in sorted(os.listdir(folder_path)):
+        full_path = os.path.join(folder_path, entry)
+        if os.path.isfile(full_path):
+            _, ext = os.path.splitext(entry)
+            if ext.lower() in valid_exts:
+                files.append(f"assets/media/{subfolder}/{entry}")
+    return files
+
+
+def update_index_profile(content: str) -> str:
+    new_src = resolve_new_profile_src()
+    if not new_src:
+        print("[Info] New profile photo not found in assets/media/portrait/; skipped index image swap.")
+        return content
+
+    # Replace portrait image inside index.html (preferring OFFICIAL PORTRAIT / portrait folder match)
+    updated, count = re.subn(
+        r'(<img\b[^>]*\bsrc=["\'])assets/media/portrait/[^"\']+(["\'][^>]*>)',
+        rf"\g<1>{new_src}\g<2>",
+        content,
+        count=1,
+        flags=re.IGNORECASE,
+    )
+    if count > 0:
+        print(f"[Index Portrait] Updated index.html profile image -> {new_src}")
+    return updated
+
+
+def populate_media_gallery_slots(content: str) -> str:
+    portraits = find_existing_media_by_folder("portrait")
+    books = find_existing_media_by_folder("books")
+    cinema = find_existing_media_by_folder("cinema-theatre")
+    gallery_existing = find_existing_media_by_folder("gallery")
+
+    # Pick best available images per slot category without breaking missing files
+    best_portrait = portraits[0] if portraits else None
+    best_book = books[0] if books else None
+    best_cinema = cinema[0] if cinema else None
+    best_theatre = next((p for p in cinema if "theatre" in p.lower() or "stage" in p.lower()), best_cinema)
+    best_poetry = gallery_existing[0] if gallery_existing else best_portrait
+    best_awards = gallery_existing[1] if len(gallery_existing) > 1 else (best_book or best_portrait)
+
+    slot_mapping = [
+        ("PORTRAIT SLOT", best_portrait, "Jasmin Bhatt Official Portrait"),
+        ("BOOKS SLOT", best_book, "Published Book Cover"),
+        ("CINEMA & OTT SLOT", best_cinema, "Film & OTT Poster"),
+        ("THEATRE SLOT", best_theatre, "Theatre & Stage Production"),
+        ("POETRY & EVENTS SLOT", best_poetry, "Poetry & Literary Event"),
+        ("CREDENTIALS & AWARDS SLOT", best_awards, "Credentials & Recognition"),
+    ]
+
+    for slot_label, img_src, alt_text in slot_mapping:
+        if not img_src:
+            continue
+
+        # Match a placeholder card/container mentioning slot_label that doesn't already have an <img>
+        pattern = re.compile(
+            rf'(<div\b[^>]*>(?:(?!<div\b).)*?{re.escape(slot_label)}.*?)(</div>)',
+            flags=re.DOTALL | re.IGNORECASE,
+        )
+
+        def _inject_img(match):
+            block = match.group(1)
+            closing = match.group(2)
+            if "<img" in block.lower():
+                return match.group(0)
+            img_tag = (
+                f'\n    <div class="w-full flex items-center justify-center p-2">'
+                f'<img src="{img_src}" alt="{alt_text}" loading="lazy" />'
+                f'</div>\n  '
+            )
+            return f"{block}{img_tag}{closing}"
+
+        content, replaced = pattern.subn(_inject_img, content, count=1)
+        if replaced > 0:
+            print(f"[Gallery Slot] Populated '{slot_label}' -> {img_src}")
+
+    return content
+
+
+def patch_html(content: str, fname: str = "") -> str:
     content = re.sub(
         r'<meta\s+name="viewport"\s+content="width=device-width,\s*initial-scale=1\.0"\s*/?>',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />',
         content,
         flags=re.IGNORECASE,
     )
+
+    if fname.lower() == "index.html":
+        content = update_index_profile(content)
+
+    if fname.lower() == "media-gallery.html":
+        content = populate_media_gallery_slots(content)
 
     pattern_existing = re.compile(
         re.escape(MARKER_START) + r".*?" + re.escape(MARKER_END),
@@ -176,7 +315,7 @@ def main():
         with open(fname, "r", encoding="utf-8") as f:
             original = f.read()
 
-        patched = patch_html(original)
+        patched = patch_html(original, fname=fname)
 
         with open(fname, "w", encoding="utf-8") as f:
             f.write(patched)
